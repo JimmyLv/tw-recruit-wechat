@@ -1,0 +1,11 @@
+.idea/
+.happypack/
+node_modules/
+bower_components/
+
+.jekyll-metadata
+*.log
+
+_site/
+
+coverage/
