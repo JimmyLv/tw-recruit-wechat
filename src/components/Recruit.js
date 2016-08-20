@@ -1,35 +1,25 @@
 import React from 'react'
-import './Recruit.css'
-import NavItem from './NavItem'
+import './Company.css'
+import NavItemWithTwoColumn from './NavItemWithTwoColumn'
+import NavTitle from './NavTitle'
 
 const navItems = [
-  { title: '骚窝介绍', image: 'glyph-10-purple.png' },
-  { title: '骚窝生活', image: 'glyph-10-orange.png' },
-  { title: '培训与发展', image: 'glyph-10-red.png' },
-  { title: '骚窝福利包', image: 'glyph-10-pink.png' },
-  { title: '办公室实景', image: 'glyph-10-magenta.png' },
+  { title: '校招行程', image: 'glyph-10-blue.png' },
+  { title: '开放职位', image: 'glyph-10-orange.png' },
+  { title: '校招公告', image: 'glyph-10-pink.png' },
+  { title: 'FAQ', image: 'glyph-10-teal.png' },
 ]
 
 const Recruit = () => (
   <div className="container">
-    <div className="row" style={{ marginTop: '20px', marginBottom: '80px' }}>
-      <div className="col-xs-8 col-xs-offset-3">
-        <div className="media">
-          <div className="media-left media-middle">
-            <img className="media-object" style={{ width: '60px' }} src={require('../../images/go-self-service-2.png')}/>
-          </div>
-          <div className="media-body">
-            <h2>了解公司</h2>
-          </div>
-        </div>
-      </div>
-    </div>
+
+    <NavTitle title={'应聘校招'} image={'voice-of-the-customer.png'}/>
 
     <div className="row">
-      {navItems.slice(0, 3).map((item, index) => <NavItem key={index} title={item.title} image={item.image}/>)}
+      {navItems.slice(0, 2).map((item, index) => <NavItemWithTwoColumn key={index} title={item.title} image={item.image}/>)}
     </div>
     <div className="row">
-      {navItems.slice(3, 5).map((item, index) => <NavItem key={index} title={item.title} image={item.image}/>)}
+      {navItems.slice(2, 4).map((item, index) => <NavItemWithTwoColumn key={index} title={item.title} image={item.image}/>)}
     </div>
   </div>
 )
