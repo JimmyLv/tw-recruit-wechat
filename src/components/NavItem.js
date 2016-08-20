@@ -1,9 +1,12 @@
 import React from 'react'
+import './NavItem.less'
 
 const NavItem = ({ title, image }) => (
-  <div className="col-xs-4" style={{ transform: 'rotate(7deg)' }}>
+  <div>
     <img src={require(`../../images/${image}`)} className="img-responsive" alt="magenta"/>
-    <h4 className="Recruit-nav">{title}</h4>
+    <div className="nav-item-title">
+      {title.split('\n').map((t, index)=><h2 key={index}>{t}</h2>)}
+    </div>
   </div>
 )
 

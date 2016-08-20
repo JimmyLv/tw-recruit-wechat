@@ -1,14 +1,21 @@
 import React from 'react'
-import './Company.css'
-import NavItemWithTwoColumn from './NavItemWithTwoColumn'
+import NavItem from './NavItem'
 import NavTitle from './NavTitle'
 
+import './Recurit.css'
+
 const navItems = [
-  { title: '校招行程', image: 'glyph-10-blue.png' },
-  { title: '开放职位', image: 'glyph-10-orange.png' },
-  { title: '校招公告', image: 'glyph-10-pink.png' },
+  { title: '校招\n行程', image: 'glyph-10-blue.png' },
+  { title: '开放\n职位', image: 'glyph-10-orange.png' },
+  { title: '校招\n公告', image: 'glyph-10-pink.png' },
   { title: 'FAQ', image: 'glyph-10-teal.png' },
 ]
+
+const renderItem = (item, index) => (
+  <div className="col-xs-6 Recruit-nav">
+    <NavItem key={index} title={item.title} image={item.image}/>
+  </div>
+)
 
 const Recruit = () => (
   <div className="container">
@@ -16,10 +23,7 @@ const Recruit = () => (
     <NavTitle title={'应聘校招'} image={'voice-of-the-customer.png'}/>
 
     <div className="row">
-      {navItems.slice(0, 2).map((item, index) => <NavItemWithTwoColumn key={index} title={item.title} image={item.image}/>)}
-    </div>
-    <div className="row">
-      {navItems.slice(2, 4).map((item, index) => <NavItemWithTwoColumn key={index} title={item.title} image={item.image}/>)}
+      {navItems.map((item, index) => renderItem(item, index))}
     </div>
   </div>
 )
