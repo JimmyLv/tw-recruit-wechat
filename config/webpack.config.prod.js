@@ -3,6 +3,7 @@ var autoprefixer = require('autoprefixer');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 // TODO: hide this behind a flag and eliminate dead code on eject.
 // This shouldn't be exposed to the user.
@@ -61,12 +62,17 @@ module.exports = {
         loader: ExtractTextPlugin.extract('style', 'css?-autoprefixer!postcss')
       },
       {
+        test: /\.less$/,
+        include: srcPath,
+        loader: ExtractTextPlugin.extract('style', 'css?-autoprefixer!postcss!less')
+      },
+      {
         test: /\.json$/,
         loader: 'json'
       },
       {
         test: /\.(jpg|png|gif|eot|svg|ttf|woff|woff2)$/,
-        loader: 'file',
+        loader: 'file?name=./assets/[name].[ext]',
       },
       {
         test: /\.(mp4|webm)$/,
@@ -80,10 +86,13 @@ module.exports = {
     configFile: path.join(__dirname, 'eslint.js'),
     useEslintrc: false
   },
-  postcss: function() {
+  postcss: function () {
     return [autoprefixer];
   },
   plugins: [
+    new CopyWebpackPlugin([
+      { from: '../assets/css/bootstrap.min.css', to: './assets/css/bootstrap.min.css' }
+    ]),
     new HtmlWebpackPlugin({
       inject: true,
       template: indexHtmlPath,
