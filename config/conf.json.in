@@ -1,5 +1,5 @@
 {
-  "src": "../build",
+  "src": "./build",
   "dest": "qiniu:access_key=QiNiuAK&secret_key=QiNiuSK&bucket=jimmylv-blog&key_prefix=tw-recruit-wechat/",
   "debug_level": 1
 }
