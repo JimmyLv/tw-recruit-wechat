@@ -1,9 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router'
+
 import NavItem from '../components/NavItem'
 import NavTitle from '../components/NavTitle'
 
 import './Recruit.css'
-import { Link } from 'react-router'
 
 const navItems = [
   { title: '校招\n行程', link: 'schedule', image: 'glyph-10-blue.png' },
@@ -13,9 +14,9 @@ const navItems = [
 ]
 
 const renderItem = ({ title, link, image }, index) => (
-  <div className="col-xs-6 Recruit-nav">
+  <div key={index} className="col-xs-6 Recruit-nav">
     <Link to={`recruit/${link}`}>
-      <NavItem key={index} title={title} image={image}/>
+      <NavItem title={title} image={image}/>
     </Link>
   </div>
 )

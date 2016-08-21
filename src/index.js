@@ -7,6 +7,8 @@ import Recruit from './pages/Recruit'
 import { Schedule, Position, Announce, FAQ } from './pages/Recruit/'
 
 import Campus from './pages/Campus'
+import { Coding } from './pages/Campus/'
+
 import Company from './pages/Company'
 import NotFound from './pages/NotFound'
 
@@ -23,7 +25,12 @@ ReactDOM.render((
           <Route path="announce" component={Announce}/>
           <Route path="faq" component={FAQ}/>
         </Route>
-        <Route path="campus" component={Campus}/>
+        <Route path="campus">
+          <IndexRoute component={Campus}/>
+          <Route path="coding" component={Coding}/>
+          <Route path="openday" component={Coding}/>
+          <Route path="girl" component={Coding}/>
+        </Route>
         <Route path="company" component={Company}/>
         <Route path="*" component={NotFound}/>
       </Route>

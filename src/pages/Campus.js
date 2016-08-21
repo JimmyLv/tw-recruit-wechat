@@ -1,28 +1,31 @@
 import React from 'react'
-import './Company.css'
+import { Link } from 'react-router'
+
 import NavItem from '../components/NavItem'
 import NavTitle from '../components/NavTitle'
 
 import './Campus.css'
 
 const navItems = [
-  { title: '最佳编程\n体验之旅', image: 'glyph-10-blue.png' },
-  { title: '企业\n开放日', image: 'glyph-10-orange.png' },
-  { title: '校园\n女生活动', image: 'glyph-10-pink.png' },
+  { title: '最佳编程\n体验之旅', link: 'coding', image: 'glyph-10-blue.png' },
+  { title: '企业\n开放日', link: 'openday', image: 'glyph-10-orange.png' },
+  { title: '校园\n女生活动', link: 'girl', image: 'glyph-10-pink.png' },
 ]
 
-const Company = () => (
+const Campus = () => (
   <div className="container">
     <NavTitle title={'校园活动'} image={'campus-activities.png'}/>
 
     <div className="row">
-      {navItems.map((item, index) =>(
-        <div className="col-xs-6 Campus-nav">
-          <NavItem key={index} title={item.title} image={item.image}/>
+      {navItems.map(({ title, link, image }, index) =>(
+        <div key={index} className="col-xs-6 Campus-nav">
+          <Link to={`campus/${link}`}>
+            <NavItem title={title} image={image}/>
+          </Link>
         </div>
       ))}
     </div>
   </div>
 )
 
-export default Company
+export default Campus
