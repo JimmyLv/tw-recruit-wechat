@@ -29,7 +29,7 @@ module.exports = {
     chunkFilename: '[name].[chunkhash].chunk.js',
     // TODO: this wouldn't work for e.g. GH Pages.
     // Good news: we can infer it from package.json :-)
-    publicPath: '/'
+    publicPath: './'
   },
   resolve: {
     extensions: ['', '.js'],
@@ -91,7 +91,8 @@ module.exports = {
   },
   plugins: [
     new CopyWebpackPlugin([
-      { from: '../assets/css/bootstrap.min.css', to: './assets/css/bootstrap.min.css' }
+      { from: './assets/css/bootstrap.min.css', to: './assets/css/bootstrap.min.css' },
+      { from: './assets/css/bootstrap.min.css.map', to: './assets/css/bootstrap.min.css.map' }
     ]),
     new HtmlWebpackPlugin({
       inject: true,
