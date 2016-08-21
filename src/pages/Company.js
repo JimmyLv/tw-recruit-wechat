@@ -1,6 +1,6 @@
 import React from 'react'
-import NavItem from './NavItem'
-import NavTitle from './NavTitle'
+import NavItem from '../components/NavItem'
+import NavTitle from '../components/NavTitle'
 
 import './Company.css'
 

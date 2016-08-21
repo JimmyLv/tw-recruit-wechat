@@ -2,13 +2,13 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Router, Route, IndexRoute, hashHistory } from 'react-router'
 
-import App from './components/App'
-import Recruit from './components/Recruit'
-import Schedule from './components/Schedule'
+import App from './pages/App'
+import Recruit from './pages/Recruit'
+import Schedule from './pages/Schedule'
 
-import Campus from './components/Campus'
-import Company from './components/Company'
-import NotFound from './components/NotFound'
+import Campus from './pages/Campus'
+import Company from './pages/Company'
+import NotFound from './pages/NotFound'
 
 import './index.css'
 
