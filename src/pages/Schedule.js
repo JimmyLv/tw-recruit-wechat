@@ -1,4 +1,6 @@
 import React from 'react'
+
+import NavSubTitle from '../components/NavSubTitle'
 import './Schedule.css'
 
 const renderProgresses = ({ image, description }, index) => (
@@ -28,15 +30,11 @@ const progresses = [
 
 const Schedule = () => (
   <div className="container">
-    <div className="row text-center">
-      <h2 className="schedule-title">校招流程</h2>
-    </div>
+    <NavSubTitle title="校招流程"/>
     <div className="row">
       {progresses.map((p, index) => renderProgresses(p, index))}
     </div>
-    <div className="row text-center">
-      <h2 className="schedule-title">宣讲会安排</h2>
-    </div>
+    <NavSubTitle title="宣讲会安排"/>
     <div>
       ThoughtWorks校园宣讲会将于9月份中下旬登陆成都、西安、北京和武汉地区，敬请期待！
     </div>
