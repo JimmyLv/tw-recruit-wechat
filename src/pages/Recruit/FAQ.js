@@ -1,6 +1,6 @@
 import React from 'react'
 
-import NavSubTitle from '../components/NavSubTitle'
+import NavSubTitle from '../../components/NavSubTitle'
 import './FAQ.less'
 
 const renderFAQ = ({ question, answer }, index) => (

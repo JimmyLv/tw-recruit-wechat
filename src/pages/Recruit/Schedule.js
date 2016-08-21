@@ -1,16 +1,16 @@
 import React from 'react'
 
-import NavSubTitle from '../components/NavSubTitle'
+import NavSubTitle from '../../components/NavSubTitle'
 import './Schedule.css'
 
 const renderProgresses = ({ image, description }, index) => (
   <div key={index} className="col-xs-4">
     <div className="row">
       <div className="col-xs-9">
-        <img className="img-responsive" src={require(`../../images/${image}`)}/>
+        <img className="img-responsive" src={require(`../../../images/${image}`)}/>
       </div>
       <div className="col-xs-3">
-        <img className="img-responsive progress-mark" src={require(`../../images/glyph-9-teal.png`)}/>
+        <img className="img-responsive progress-mark" src={require(`../../../images/glyph-9-teal.png`)}/>
       </div>
     </div>
     <p className="row progress-description">

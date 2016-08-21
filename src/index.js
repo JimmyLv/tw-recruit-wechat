@@ -4,14 +4,14 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router'
 
 import App from './pages/App'
 import Recruit from './pages/Recruit'
-import Schedule from './pages/Schedule'
-import Position from './pages/Position'
-import Announce from './pages/Announce'
-import FAQ from './pages/FAQ'
+import Schedule from './pages/Recruit/Schedule'
+import Position from './pages/Recruit/Position'
+import Announce from './pages/Recruit/Announce'
+import FAQ from './pages/Recruit/FAQ'
 
 import Campus from './pages/Campus'
 import Company from './pages/Company'
-import NotFound from './pages/NotFound'
+import NotFound from './pages/Recruit/NotFound'
 
 import './index.css'
 

@@ -1,7 +1,6 @@
 import React from 'react'
 
-import NavSubTitle from '../components/NavSubTitle'
-import './Schedule.css'
+import NavSubTitle from '../../components/NavSubTitle'
 
 const Position = () => (
   <div className="container">
