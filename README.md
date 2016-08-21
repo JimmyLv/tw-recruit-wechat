@@ -1,3 +1,32 @@
+# tw-recruit-wechat
+
+> ThoughtWorks 校招,微信前端专用。
+
+[![Build Status](https://travis-ci.org/JimmyLv/tw-recruit-wechat.svg?branch=master)](https://travis-ci.org/JimmyLv/tw-recruit-wechat)
+[![codecov](https://codecov.io/gh/JimmyLv/tw-recruit-wechat/branch/master/graph/badge.svg)](https://codecov.io/gh/JimmyLv/tw-recruit-wechat)
+
+[![Dependency Status](https://img.shields.io/david/JimmyLv/tw-recruit-wechat.svg?style=flat-square)](https://david-dm.org/JimmyLv/tw-recruit-wechat)
+[![devDependency
+Status](https://img.shields.io/david/dev/JimmyLv/tw-recruit-wechat.svg?style=flat-square)](https://david-dm.org/JimmyLv/tw-recruit-wechat#info=devDependencies)
+
+## Demos
+
+[![](http://7xjbdq.com1.z0.glb.clouddn.com/images/2016/1471791534760.png)](http://7xjbdq.com1.z0.glb.clouddn.com/tw-recruit-wechat)
+
+## Getting Started
+
+```bash
+npm install # properly use cnpm if you are in China
+
+npm start # auto open http://localhost:3000/
+```
+
+## Deployment in CI
+
+<https://travis-ci.org/JimmyLv/tw-recruit-wechat>
+
+------
+
 Below you will find some information on how to perform common tasks.  
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/template/README.md).
 
