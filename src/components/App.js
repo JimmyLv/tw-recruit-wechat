@@ -1,41 +1,33 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Link } from 'react-router'
 
 import './App.css'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="container">
-        <img src={require('../../images/TW Colour Logos_pink.jpg')} className="img-responsive" alt="Logo"/>
-        <img src={require('../../images/social-globe.jpg')} className="img-responsive" alt="Logo"/>
-        <table>
-          <tr>
-            <td>
-              <Link to={'/recruit'}>
-                <img src={require('../../images/voice-of-the-customer.png')} className="img-responsive" alt=""/>
-              </Link>
-            </td>
-            <td>
-              <Link to={'/campus'}>
-                <img src={require('../../images/campus-activities.png')} className="img-responsive" alt=""/>
-              </Link>
-            </td>
-            <td>
-              <Link to={'/company'}>
-                <img src={require('../../images/go-self-service-2.png')} className="img-responsive" alt=""/>
-              </Link>
-            </td>
-          </tr>
-          <tr>
-            <td className="text-center"><h3>应聘校招</h3></td>
-            <td className="text-center"><h3>校园活动</h3></td>
-            <td className="text-center"><h3>了解公司</h3></td>
-          </tr>
-        </table>
+const mainNav = [
+  { title: '应聘校招', link: 'recruit', image: 'voice-of-the-customer.png' },
+  { title: '校园活动', link: 'campus', image: 'campus-activities.png' },
+  { title: '了解公司', link: 'company', image: 'go-self-service-2.png' },
+]
+
+const renderNav = ({ title, link, image }, index) => (
+  <div key={index} className="col-xs-4">
+    <Link to={link}>
+      <div className="text-center">
+        <img src={require(`../../images/${image}`)} className="img-responsive" alt={link}/>
+        <h3 className="main-nav-title">{title}</h3>
       </div>
-    )
-  }
-}
+    </Link>
+  </div>
+)
+
+const App = () => (
+  <div className="container">
+    <img src={require('../../images/TW Colour Logos_pink.jpg')} className="img-responsive" alt="Logo"/>
+    <img src={require('../../images/social-globe.jpg')} className="img-responsive" alt="Logo"/>
+    <div className="row">
+      {mainNav.map((nav, index) => renderNav(nav, index))}
+    </div>
+  </div>
+)
 
 export default App
