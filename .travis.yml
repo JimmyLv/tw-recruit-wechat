@@ -1,0 +1,37 @@
+sudo: false
+branches:
+  only:
+    - master
+language: node_js
+node_js:
+  - stable
+before_install:
+  - export CHROME_BIN=chromium-browser
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+script:
+  - npm install
+  - npm run build
+  - cat config/conf.json.in | sed -e "s/QiNiuAK/$QiNiuAK/" | sed -e "s/QiNiuSK/$QiNiuSK/" > config/conf.json
+  - wget http://devtools.qiniu.io/qiniu-devtools-linux_amd64-current.tar.gz
+  - tar xfz qiniu-*.tar.gz
+  - ./qrsync config/conf.json
+after_script:
+#  - npm run codecov
+cache:
+  directories:
+    - node_modules
+after_success:
+#  - bash <(curl -s https://codecov.io/bash)
+  - |
+    if [ -n "$GITHUB_API_KEY" ]; then
+      cd build
+      git init
+      git config --global user.email "Travis CI"
+      git config --global user.name "travis@jimmylv.com"
+      git add .
+      git commit -m "Deploy at `date +"%Y-%m-%d %H:%M"`"
+      # Make sure to make the output quiet, or else the API token will leak!
+      # This works because the API key can replace your password.
+      git push -f -q https://$GITHUB_API_KEY@github.com/JimmyLv/tw-recruit-wechat.git master:gh-pages > /dev/null 2>&1
+    fi
