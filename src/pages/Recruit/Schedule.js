@@ -35,9 +35,9 @@ const Schedule = () => (
       {progresses.map((p, index) => renderProgresses(p, index))}
     </div>
     <NavSubTitle title="宣讲会安排"/>
-    <div>
+    <p>
       ThoughtWorks校园宣讲会将于9月份中下旬登陆成都、西安、北京和武汉地区，敬请期待！
-    </div>
+    </p>
   </div>
 )
 

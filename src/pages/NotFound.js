@@ -1,14 +1,17 @@
 import React from 'react'
-import logo from '../logo.svg'
+
+import './NotFound.css'
 
 const NotFound = () => (
-	<div className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <h2>Welcome to React App</h2>
-      <h3>Let me try hot reload work or not?</h3>
-      <h4 className="pre">{decodeURI('hello')}</h4>
-      <h5>why do onot reload by components, you have no reason to do this.</h5>
-    </div>
+  <div>
+    <a href="/">
+      <img src={require('../../images/TW Colour Logos_pink.jpg')} className="img-responsive center-block" alt="Logo"/>
+      <br/>
+      <br/>
+      <br/>
+      <img src={require('../../images/social-globe.jpg')} className="App-logo img-responsive center-block" alt="ThoughtWorks"/>
+    </a>
+  </div>
 )
 
 export default NotFound
