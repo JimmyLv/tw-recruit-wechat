@@ -4,7 +4,7 @@ import NavSubTitle from '../../components/NavSubTitle'
 
 import './Training.css'
 
-const Activity = () => (
+const Benefit = () => (
   <div className="container">
     <NavSubTitle title="基本福利"/>
     <table className="table table-bordered table-hover">
@@ -94,4 +94,4 @@ const Activity = () => (
   </div>
 )
 
-export default Activity
+export default Benefit
