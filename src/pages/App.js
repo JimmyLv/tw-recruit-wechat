@@ -22,8 +22,8 @@ const renderNav = ({ title, link, image }, index) => (
 
 const App = () => (
   <div className="container">
-    <img src={require('../../images/TW Colour Logos_pink.jpg')} className="img-responsive center-block" alt="Logo"/>
-    <img src={require('../../images/social-globe.jpg')} className="img-responsive center-block" alt="Logo"/>
+    <img src={require('../../images/TW Colour Logos_pink.png')} className="img-responsive center-block" alt="Logo"/>
+    <img src={require('../../images/social-globe.png')} className="img-responsive center-block" alt="Logo"/>
     <div className="row">
       {mainNav.map((nav, index) => renderNav(nav, index))}
     </div>
