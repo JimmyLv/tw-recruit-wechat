@@ -10,7 +10,7 @@ import Campus from './pages/Campus'
 import { Coding, OpenDay, Girl } from './pages/Campus/'
 
 import Company from './pages/Company'
-import { Introduction } from './pages/Company/'
+import { Introduction, Activity, Training, Benefit, Office } from './pages/Company/'
 
 import NotFound from './pages/NotFound'
 
@@ -36,10 +36,10 @@ ReactDOM.render((
         <Route path="company">
           <IndexRoute component={Company}/>
           <Route path="introduction" component={Introduction}/>
-          <Route path="activity" component={OpenDay}/>
-          <Route path="training" component={Girl}/>
-          <Route path="benefit" component={Girl}/>
-          <Route path="office" component={Girl}/>
+          <Route path="activity" component={Activity}/>
+          <Route path="training" component={Training}/>
+          <Route path="benefit" component={Benefit}/>
+          <Route path="office" component={Office}/>
         </Route>
         <Route path="*" component={NotFound}/>
       </Route>
