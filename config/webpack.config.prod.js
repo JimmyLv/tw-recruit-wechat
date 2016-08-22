@@ -71,14 +71,30 @@ module.exports = {
         loader: 'json'
       },
       {
-        test: /\.(jpg|png|gif|eot|svg|ttf|woff|woff2)$/,
-        loader: 'file?name=./assets/[name].[ext]',
+        test: /\.(eot|ttf|woff|woff2)$/,
+        loader: 'file?name=./assets/fonts/[name].[ext]',
+      },
+      {
+        test: /.*\.(gif|png|jpe?g|svg)$/i,
+        loaders: [
+          'file?limit=8192&name=./assets/images/[name].[ext]',
+          'image-webpack'
+        ]
       },
       {
         test: /\.(mp4|webm)$/,
         loader: 'url?limit=10000'
       }
     ]
+  },
+  imageWebpackLoader: {
+    progressive: true, // jpg
+    optimizationLevel: 7, // png
+    interlaced: false, // gif
+    pngquant: {
+      quality: "65-90",
+      speed: 4
+    }
   },
   eslint: {
     // TODO: consider separate config for production,
