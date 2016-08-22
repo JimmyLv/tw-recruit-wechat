@@ -1,12 +1,17 @@
-.progress-mark {
-    /*position: absolute;*/
-    /*top: 50%;*/
-    /*left: 50%;*/
-    /*transform: translate(-50%, -50%);*/
+.progress-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
-    /*width: 20px;*/
-    display: inline-block;
-    vertical-align: middle;
+    width: 10px;
+    /*display: inline-block;*/
+    /*vertical-align: middle;*/
+}
+
+.progress-mark {
+    padding: 0 0;
+    height: 85px;
 }
 
 .progress-description {

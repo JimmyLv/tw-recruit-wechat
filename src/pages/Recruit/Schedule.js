@@ -3,15 +3,15 @@ import React from 'react'
 import NavSubTitle from '../../components/NavSubTitle'
 import './Schedule.css'
 
-const renderProgresses = ({ image, description }, index) => (
+const renderProgresses = ({ image, description }, index, length) => (
   <div key={index} className="col-xs-4">
     <div className="row">
-      <div className="col-xs-9">
+      <div className="col-xs-10">
         <img className="img-responsive" src={require(`../../../images/${image}`)}/>
       </div>
-      <div className="col-xs-3">
-        <img className="img-responsive progress-mark" src={require(`../../../images/glyph-9-teal.png`)}/>
-      </div>
+      {index < (length - 1) ? (<div className="col-xs-2 progress-mark">
+        <img className="img-responsive progress-image" src={require(`../../../images/glyph-9-teal.png`)}/>
+      </div>) : null}
     </div>
     <p className="row progress-description">
       {description}
@@ -32,7 +32,7 @@ const Schedule = () => (
   <div className="container">
     <NavSubTitle title="校招流程"/>
     <div className="row">
-      {progresses.map((p, index) => renderProgresses(p, index))}
+      {progresses.map((p, index) => renderProgresses(p, index, progresses.length))}
     </div>
     <NavSubTitle title="宣讲会安排"/>
     <p>
