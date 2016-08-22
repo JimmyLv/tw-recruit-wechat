@@ -22,11 +22,19 @@ var buildPath = path.join(__dirname, isInNodeModules ? '../../..' : '..', 'build
 module.exports = {
   bail: true,
   devtool: 'source-map',
-  entry: path.join(srcPath, 'index'),
+  entry: {
+    main: path.join(srcPath, 'index'),
+    vendor: [
+      // react
+      'react',
+      'react-dom',
+      'react-router',
+    ]
+  },
   output: {
     path: buildPath,
-    filename: '[name].[chunkhash].js',
-    chunkFilename: '[name].[chunkhash].chunk.js',
+    filename: '[name].js',
+    chunkFilename: '[name].chunk.js',
     // TODO: this wouldn't work for e.g. GH Pages.
     // Good news: we can infer it from package.json :-)
     publicPath: './'
@@ -110,10 +118,13 @@ module.exports = {
       { from: './assets/css/bootstrap.min.css', to: './assets/css/bootstrap.min.css' },
       { from: './assets/css/bootstrap.min.css.map', to: './assets/css/bootstrap.min.css.map' }
     ]),
+    new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js'),
     new HtmlWebpackPlugin({
       inject: true,
+      hash: true,
       template: indexHtmlPath,
       favicon: faviconPath,
+      chunks: ['vendor', 'main'],
       minify: {
         removeComments: true,
         collapseWhitespace: true,
@@ -143,6 +154,6 @@ module.exports = {
         screw_ie8: true
       }
     }),
-    new ExtractTextPlugin('[name].[contenthash].css')
+    new ExtractTextPlugin('[name].css')
   ]
 };
