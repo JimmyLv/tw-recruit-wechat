@@ -1,7 +1,7 @@
 import React from 'react'
 
 import NavSubTitle from '../../components/NavSubTitle'
-import './Schedule.css'
+import './Schedule.less'
 
 const Position = () => (
   <div className="container">

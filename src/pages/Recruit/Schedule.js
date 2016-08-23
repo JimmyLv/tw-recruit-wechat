@@ -1,21 +1,16 @@
 import React from 'react'
 
 import NavSubTitle from '../../components/NavSubTitle'
-import './Schedule.css'
+import './Schedule.less'
 
 const renderProgresses = ({ image, description }, index, length) => (
-  <div key={index} className="col-xs-4">
+  <div key={index}>
     <div className="row">
-      <div className="col-xs-10">
-        <img className="img-responsive" src={require(`../../../images/${image}`)}/>
+      <div className="col-xs-4">
+        <img className="progress-image" src={require(`../../../images/${image}`)}/>
       </div>
-      {index < (length - 1) ? (<div className="col-xs-2 progress-mark">
-        <img className="img-responsive progress-image" src={require(`../../../images/glyph-9-teal.png`)}/>
-      </div>) : null}
+      <strong className="col-xs-8 progress-description">{description}</strong>
     </div>
-    <p className="row progress-description">
-      {description}
-    </p>
   </div>
 )
 
@@ -25,19 +20,26 @@ const progresses = [
   { description: '参加所在城市宣讲会，宣讲会后参与笔试', image: 'edit.png' },
   { description: '下载编程作业，在规定时间内完成并上传', image: 'data-1.png' },
   { description: 'HR面试，小组面试，技术面试', image: 'fast.png' },
-  { description: 'Offer', image: 'gift.png' },
+  { description: 'Offer 到手', image: 'gift.png' },
 ]
 
 const Schedule = () => (
   <div className="container">
     <NavSubTitle title="校招流程"/>
-    <div className="row">
-      {progresses.map((p, index) => renderProgresses(p, index, progresses.length))}
-    </div>
+    {progresses.map((p, index) => renderProgresses(p, index, progresses.length))}
+
     <NavSubTitle title="宣讲会安排"/>
     <p>
       ThoughtWorks校园宣讲会将于9月份中下旬登陆成都、西安、北京和武汉地区，敬请期待！
     </p>
+    <p>
+      <strong>2017 校园招聘宣讲会和笔试在什么时候开始？</strong>
+      <div className="faq-highlight">西安将会在9月21-24号这周进行，十一假期之后，武汉，成都，北京三地校园行同步进行，同学们要及时关注校招网站内公告栏里的宣讲日期，做好准备噢。</div>
+    </p>
+    <p>
+      同时也请关注ThoughtWorks微信平台和新浪微博@<strong>ThoughtWorks招才猫姐</strong>，或者添加校招微信账号：<strong>thoughtworks_hr</strong> 及时了解校招相关信息。
+    </p>
+    <br/>
   </div>
 )
 

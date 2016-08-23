@@ -75,7 +75,7 @@ const Position = () => (
         <div className="faq-highlight">西安、成都、武汉、北京四地各招聘30+毕业生，招聘职位为软件开发工程师及技术领导管培生，每个职位不设具体名额。</div>
       </li>
       <li>
-        <strong>2016校园招聘宣讲会和笔试在什么时候开始？</strong>
+        <strong>2017 校园招聘宣讲会和笔试在什么时候开始？</strong>
         <div><span className="faq-highlight">西安将会在9月21-24号这周进行，十一假期之后，武汉，成都，北京三地校园行同步进行，同学们要及时关注校招网站内公告栏里的宣讲日期，做好准备噢。</span>同时也请关注ThoughtWorks微信平台和新浪微博@ThoughtWorks招才猫姐，或者添加校招微信账号：thoughtworks_hr及时了解校招相关信息。
         </div>
       </li>
