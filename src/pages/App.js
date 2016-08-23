@@ -13,7 +13,7 @@ const renderNav = ({ title, link, image }, index) => (
   <div key={index} className="col-xs-4">
     <Link to={link}>
       <div className="text-center">
-        <img src={require(`../../images/${image}`)} className="img-responsive" alt={link}/>
+        <img src={require(`../../images/${image}`)} className="img-responsive main-nav-image" alt={link}/>
         <h3 className="main-nav-title">{title}</h3>
       </div>
     </Link>

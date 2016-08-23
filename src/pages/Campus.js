@@ -4,7 +4,7 @@ import { Link } from 'react-router'
 import NavItem from '../components/NavItem'
 import NavTitle from '../components/NavTitle'
 
-import './Campus.css'
+import './Campus.less'
 
 const navItems = [
   { title: '最佳编程\n体验之旅', link: 'coding', image: 'glyph-10-blue.png' },

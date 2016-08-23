@@ -4,7 +4,7 @@ import { Link } from 'react-router'
 import NavItem from '../components/NavItem'
 import NavTitle from '../components/NavTitle'
 
-import './Company.css'
+import './Company.less'
 
 const navItems = [
   { title: '骚窝\n介绍', link: 'introduction', image: 'glyph-10-purple.png' },
@@ -15,7 +15,7 @@ const navItems = [
 ]
 
 const renderItem = ({ title, link, image }, index) => (
-  <div key={index} className="col-xs-4 Company-nav" style={{ transform: 'rotate(7deg)' }}>
+  <div key={index} className="col-xs-4 Company-nav">
     <Link to={`company/${link}`}>
       <NavItem title={title} image={image}/>
     </Link>

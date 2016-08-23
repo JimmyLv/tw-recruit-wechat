@@ -4,7 +4,7 @@ import { Link } from 'react-router'
 import NavItem from '../components/NavItem'
 import NavTitle from '../components/NavTitle'
 
-import './Recruit.css'
+import './Recruit.less'
 
 const navItems = [
   { title: '校招\n行程', link: 'schedule', image: 'glyph-10-blue.png' },
