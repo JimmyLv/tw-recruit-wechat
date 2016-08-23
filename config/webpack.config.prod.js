@@ -29,7 +29,6 @@ module.exports = {
       'react',
       'react-dom',
       'react-router',
-      'history',
     ]
   },
   output: {
