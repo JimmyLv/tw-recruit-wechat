@@ -1,4 +1,5 @@
 import React from 'react'
+import './Coding.less'
 
 import NavSubTitle from '../../components/NavSubTitle'
 import Image from '../../components/Image'
@@ -17,9 +18,17 @@ const images = [
 const Coding = () => (
   <div className="container">
     <NavSubTitle title="最佳编程体验之旅"/>
-    <div>
-      最佳编程体验之旅是由ThoughtWorks发起的全国性质的编程实践体验活动, 向全国重点院校的优秀IT学子，在北京、西安、成都和武汉同步进行。采用一对一导师技术指导，亲临全球IT顶尖咨询公司各地office，感受技术氛围，提升技术能力。
+    <div className="coding-description">
+      <p>最佳编程体验之旅是由ThoughtWorks发起的全国性质的编程实践体验活动, 向全国重点院校的优秀IT学子，在北京、西安、成都和武汉同步进行。
+      </p>
+      <div className="coding-benefit"><strong>你将获得：</strong></div>
+      <ul>
+        <li>亲临全球最难面试IT公司，零距离接触技术大牛，学习最前沿的编程技能！</li>
+        <li>体验自由创新Geek氛围，与男神女神深入交流，经历一场完美编程体验！</li>
+        <li>经历四期狂拽酷炫Pair Programming Game，感受代码改变世界的力量！</li>
+      </ul>
     </div>
+    <Image image={'coding-宣传单页.jpg'}/>
     {images.map((image, index) => renderImage(image, index))}
   </div>
 )
