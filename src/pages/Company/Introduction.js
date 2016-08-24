@@ -70,9 +70,12 @@ const Introduction = () => (
     <div>
       {people.map((p, index) => <Person key={index} image={p.image} position={p.position} intro={p.intro}/>)}
     </div>
-    <NavSubTitle title="一分钟了解ThoughtWorks"/>
+    <NavSubTitle title="更多了解ThoughtWorks"/>
     <p>
-      视频链接：<a href="http://v.qq.com/page/v/k/r/v0310xz6qkr.html">http://v.qq.com/page/v/k/r/v0310xz6qkr.html</a>
+      <p>
+        视频链接：<a href="http://v.qq.com/page/v/k/r/v0310xz6qkr.html">http://v.qq.com/page/v/k/r/v0310xz6qkr.html</a>
+      </p>
+      <iframe frameborder="0" width="640" height="498" src="http://v.qq.com/iframe/player.html?vid=v0310xz6qkr&tiny=0&auto=0" allowfullscreen></iframe>
     </p>
   </div>
 )
