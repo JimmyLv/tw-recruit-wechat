@@ -47,7 +47,7 @@ my-app/
   package.json
   src/
     App.css
-    App.js
+    Main.js
     index.css
     index.js
     logo.svg
@@ -263,11 +263,11 @@ node_modules/fbjs/lib/shallowEqual.js.flow:29
  29:     return x !== 0 || 1 / (x: $FlowIssue) === 1 / (y: $FlowIssue);
                                    ^^^^^^^^^^ identifier `$FlowIssue`. Could not resolve name
 
-src/App.js:3
+src/Main.js:3
   3: import logo from './logo.svg';
                       ^^^^^^^^^^^^ ./logo.svg. Required module not found
 
-src/App.js:4
+src/Main.js:4
   4: import './App.css';
             ^^^^^^^^^^^ ./App.css. Required module not found
 

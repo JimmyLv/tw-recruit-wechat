@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Router, Route, IndexRoute, hashHistory } from 'react-router'
 
-import App from './pages/App'
+import Main from './pages/Main'
 import Recruit from './pages/Recruit'
 import { Schedule, Position, Announce, FAQ } from './pages/Recruit/'
 
@@ -19,7 +19,7 @@ import './index.css'
 ReactDOM.render((
     <Router history={hashHistory}>
       <Route path="/">
-        <IndexRoute component={App}/>
+        <IndexRoute component={Main}/>
         <Route path="recruit">
           <IndexRoute component={Recruit}/>
           <Route path="schedule" component={Schedule}/>
