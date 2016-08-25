@@ -9,7 +9,7 @@ import './Recruit.less'
 const navItems = [
   { title: '校招\n行程', link: 'schedule', image: 'glyph-10-blue.png' },
   { title: '开放\n职位', link: 'position', image: 'glyph-10-orange.png' },
-  { title: '校招\n公告', link: 'announce', image: 'glyph-10-pink.png' },
+  { title: '校招\n动态', link: 'announce', image: 'glyph-10-pink.png' },
   { title: 'FAQ', link: 'faq', image: 'glyph-10-teal.png' },
 ]
 
