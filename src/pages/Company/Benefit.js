@@ -2,10 +2,10 @@ import React from 'react'
 
 import NavSubTitle from '../../components/NavSubTitle'
 
-import './Training.css'
+import './Benefit.less'
 
 const Benefit = () => (
-  <div className="container">
+  <div className="container Benefit">
     <NavSubTitle title="基本福利"/>
     <table className="table table-bordered table-hover">
       <tbody>

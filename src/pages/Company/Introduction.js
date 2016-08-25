@@ -15,7 +15,11 @@ const people = [
   { image: 'MartinFowler.png', position: '首席科学家', intro: '他是当今世界软件开发领域最具影响力的五位大师之一。他改变了人类开发软件的模式，他被开发者们尊为“教父”。' },
   { image: 'RebeccaParsons.png', position: '首席技术官', intro: 'ThoughtWorks Global CTO，同时也是敏捷委员会董事之一。' },
   { image: '熊杰.png', position: '全球医疗业务，总监架构师', intro: '他从2003年开始实践敏捷方法，之后曾为国内多家企业提供敏捷实施的咨询服务。' },
-  { image: '徐昊.png', position: '中国区首席技术专家，全球技术策略顾问', intro: '他从2003年起开始实践极限编程等敏捷方法，2005年开始，多次以敏捷教练的角色帮助国内外多个团队实施极限编程、Scrum和FDD等敏捷方法，敏捷交付和敏捷项目管理经验极为丰富。' },
+  {
+    image: '徐昊.png',
+    position: '中国区首席技术专家，全球技术策略顾问',
+    intro: '他从2003年起开始实践极限编程等敏捷方法，2005年开始，多次以敏捷教练的角色帮助国内外多个团队实施极限编程、Scrum和FDD等敏捷方法，敏捷交付和敏捷项目管理经验极为丰富。'
+  },
   { image: '夏洁.png', position: '中国区人力资源负责人，新加坡董事总经理', intro: '她从2005年加入ThoughtWorks，十年来在人力资源、软件业务分析、项目管理、客户关系建立以及办公室／区域运营等领域都扮演了重要的角色。' },
   { image: '杨云.png', position: '首席咨询师', intro: '《深入理解Scala》译者，多年来致力于推广函数式编程思想在工业界的应用。资深架构师，在2011年建立haskell函数式编程社群，在实际工业项目中有丰富的Scala使用经验。' },
 ]
@@ -75,7 +79,9 @@ const Introduction = () => (
       <p>
         视频链接：<a href="http://v.qq.com/page/v/k/r/v0310xz6qkr.html">http://v.qq.com/page/v/k/r/v0310xz6qkr.html</a>
       </p>
-      <iframe frameborder="0" width="640" height="498" src="http://v.qq.com/iframe/player.html?vid=v0310xz6qkr&tiny=0&auto=0" allowfullscreen></iframe>
+      <p>
+        <iframe className="col-sm-12 col-xs-12" src="http://v.qq.com/iframe/player.html?vid=v0310xz6qkr&tiny=0&auto=0"></iframe>
+      </p>
     </p>
   </div>
 )

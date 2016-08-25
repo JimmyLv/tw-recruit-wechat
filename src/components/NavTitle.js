@@ -2,7 +2,7 @@ import React from 'react'
 import './NavTitle.less'
 
 const NavTitle = ({ title, image }) => (
-  <div className="row nav-title">
+  <div className="row NavTitle">
     <div className="col-xs-8 col-xs-offset-2">
       <div className="media">
         <div className="media-left media-middle">

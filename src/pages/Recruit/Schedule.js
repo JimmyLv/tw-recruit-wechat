@@ -24,7 +24,7 @@ const progresses = [
 ]
 
 const Schedule = () => (
-  <div className="container">
+  <div className="container Schedule">
     <NavSubTitle title="校招流程"/>
     {progresses.map((p, index) => renderProgresses(p, index, progresses.length))}
 

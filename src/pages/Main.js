@@ -21,11 +21,13 @@ const renderNav = ({ title, link, image }, index) => (
 )
 
 const App = () => (
-  <div className="container">
+  <div className="container Main">
     <div className="wrap">
       <div className="main">
         <img src={require('../../images/TW Colour Logos_pink.png')} className="img-responsive center-block" alt="Logo"/>
-        <img src={require('../../images/social-globe.png')} className="img-responsive center-block logo" alt="Logo"/>
+        <img src={require('../../images/social-globe.png')} className="img-responsive center-block logo-icon" alt="Logo"/>
+        <img src={require('../../images/campus-activities.png')}
+             className="center-block logo-icon2"/>
       </div>
     </div>
     <div className="footer">

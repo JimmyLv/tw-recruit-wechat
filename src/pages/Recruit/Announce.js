@@ -4,7 +4,7 @@ import NavSubTitle from '../../components/NavSubTitle'
 
 const Position = () => (
   <div className="container">
-    <NavSubTitle title="校招公告"/>
+    <NavSubTitle title="校招动态"/>
   </div>
 )
 

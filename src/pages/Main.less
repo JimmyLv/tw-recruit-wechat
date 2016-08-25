@@ -1,89 +1,94 @@
-.logo {
-  padding: 15px;
-  margin-top: 40px;
-  margin-bottom: 50px;
-  animation: spin infinite 20s linear;
-}
-
-.main-nav {
-  padding: 0;
-  animation: flipInX 2s;
-
-  .main-nav-image {
-    display: inline-block;
-    width: 18px;
-    padding-right: 4px;
-    margin-bottom: 15px;
+.Main {
+  .logo-icon {
+    animation: spin infinite 20s linear;
   }
 
-  .main-nav-title {
-    display: inline-block;
-    color: black;
-    font-size: 1.35em;
-  }
-}
-
-/*
-.main-nav {
-position: fixed;
-height: 100px;
-bottom: 0;
-width: 100%;
-}
-*/
-
-.wrap {
-  min-height: 100%
-}
-
-.main {
-  padding-bottom: 50px;
-  overflow: hidden;
-}
-
-.footer {
-  margin-top: -50px;
-  height: 50px;
-}
-
-@keyframes flipInX {
-  from {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-    opacity: 0;
+  .logo-icon2 {
+    width: 100px;
+    margin-top: -10px;
+    margin-bottom: 30px;
   }
 
-  40% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
+  .main-nav {
+    padding: 0;
+    animation: flipInX 2s;
+
+    .main-nav-image {
+      display: inline-block;
+      width: 18px;
+      padding-right: 4px;
+      margin-bottom: 6px;
+    }
+
+    .main-nav-title {
+      display: inline-block;
+      color: black;
+      font-size: 1.35em;
+    }
   }
 
-  60% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-    opacity: 1;
+  /*
+  .main-nav {
+  position: fixed;
+  height: 100px;
+  bottom: 0;
+  width: 100%;
+  }
+  */
+
+  .wrap {
+    min-height: 100%
   }
 
-  80% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  .main {
+    padding-bottom: 50px;
+    overflow: hidden;
   }
 
-  to {
-    -webkit-transform: perspective(400px);
-    transform: perspective(400px);
+  .footer {
+    margin-top: -50px;
+    height: 50px;
   }
-}
 
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
+  @keyframes flipInX {
+    from {
+      -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+      transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+      opacity: 0;
+    }
+
+    40% {
+      -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+      transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+
+    60% {
+      -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+      transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+      opacity: 1;
+    }
+
+    80% {
+      -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+      transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    }
+
+    to {
+      -webkit-transform: perspective(400px);
+      transform: perspective(400px);
+    }
   }
-  to {
-    transform: rotate(360deg);
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
 }
