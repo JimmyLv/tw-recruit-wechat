@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
 
-import './Main.css'
+import './Main.less'
 
 const mainNav = [
   { title: '应聘校招', link: 'recruit', image: 'voice-of-the-customer.png' },
@@ -26,8 +26,6 @@ const App = () => (
       <div className="main">
         <img src={require('../../images/TW Colour Logos_pink.png')} className="img-responsive center-block" alt="Logo"/>
         <img src={require('../../images/social-globe.png')} className="img-responsive center-block logo" alt="Logo"/>
-        <img src={require('../../images/campus-activities.png')}
-             className="center-block another-logo"/>
       </div>
     </div>
     <div className="footer">

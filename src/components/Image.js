@@ -3,7 +3,7 @@ import './Image.less'
 
 const Image = ({ title, image }) => (
   <div className="text-center">
-    <img className="img-responsive image" src={require(`../../images/${image}`)} alt={title}/>
+    <img className="img-responsive nav-image" src={require(`../../images/${image}`)} alt={title}/>
     <div className="img-title">{title}</div>
   </div>
 )
