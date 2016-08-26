@@ -3,6 +3,7 @@ import React from 'react'
 import NavSubTitle from '../../components/NavSubTitle'
 import Image from '../../components/Image'
 import Speech from '../../components/Speech'
+import './index.less'
 
 const speeches = [
   {
@@ -22,12 +23,21 @@ const speeches = [
 const Girl = () => (
   <div className="container">
     <NavSubTitle title="校园女生活动"/>
-    <div>ThoughtWorks努力倡导男女比例1:1，通过进入校园给女生们进行面对面的职场辅导与交流，思窝希望可以帮助越来越多的菇娘爱上技术，在技术的路上坚持走下去~~~</div>
-    <Image image={'girl-女生活动1.jpg'}/>
-    <div>ThoughtWorks进入电子科技大学、四川大学、成都信息工程大学等高校与校园女生展开职场互动交流，通过相关主题分享帮助女生更勇敢和坚定地选择自己的职场方向。</div>
-    {speeches.map((speech, index) => <Speech key={index} speech={speech}/>)}
-    <div>最后是Open Space环节，参加活动的同学们，都积极的就自己最关心、最感兴趣的问题与我们的嘉宾们积极的交流，探讨。</div>
-    <Image image={'girl-女生活动4.jpg'}/>
+    <div className="coding-description">
+      <p>ThoughtWorks努力倡导男女比例1:1，通过进入校园给女生们进行面对面的职场辅导与交流，思窝希望可以帮助越来越多的菇娘爱上技术，在技术的路上坚持走下去~~~</p>
+      <div className="coding-benefit"><strong>你将获得：</strong></div>
+      <ul>
+        <li>你可以听到 IT程序媛职场心路历程发生了怎样的变化？</li>
+        <li>你也可以近距离与IT公司不同职位的女性从业者沟通，了解神秘工作背后的点点滴滴。</li>
+        <li>你可以听到同龄女生，走出象牙塔，初入职场的心路历程。</li>
+      </ul>
+      <p>青春不再迷茫；姑娘们，在这里遇见未来的自己！！！</p>
+      <Image image={'girl-女生活动1.jpg'}/>
+      <div>ThoughtWorks进入电子科技大学、四川大学、成都信息工程大学等高校与校园女生展开职场互动交流，通过相关主题分享帮助女生更勇敢和坚定地选择自己的职场方向。</div>
+      {speeches.map((speech, index) => <Speech key={index} speech={speech}/>)}
+      <div>最后是Open Space环节，参加活动的同学们，都积极的就自己最关心、最感兴趣的问题与我们的嘉宾们积极的交流，探讨。</div>
+      <Image image={'girl-女生活动4.jpg'}/>
+    </div>
   </div>
 )
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import './Coding.less'
+import './index.less'
 
 import NavSubTitle from '../../components/NavSubTitle'
 import Image from '../../components/Image'
