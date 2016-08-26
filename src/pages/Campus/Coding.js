@@ -9,17 +9,17 @@ const renderImage = ({ image, city }, index) => (
 )
 
 const images = [
-  { city: '成都', image: 'coding-成都1.jpg' },
+  { city: '成都', image: 'coding-成都.jpg' },
   { city: '北京', image: 'coding-北京.jpg' },
-  { city: '西安', image: 'coding-西安1.jpg' },
-  { city: '武汉', image: 'coding-武汉1.jpg' },
+  { city: '西安', image: 'coding-西安.jpg' },
+  { city: '武汉', image: 'coding-武汉.jpg' },
 ]
 
 const Coding = () => (
   <div className="container">
     <NavSubTitle title="最佳编程体验之旅"/>
     <div className="coding-description">
-      <p>最佳编程体验之旅是由ThoughtWorks发起的全国性质的编程实践体验活动, 向全国重点院校的优秀IT学子，在北京、西安、成都和武汉同步进行。
+      <p>最佳编程体验之旅是由 ThoughtWorks 发起的全国性质的编程实践体验活动，向全国重点院校的优秀IT学子，在北京、西安、成都和武汉同步进行。
       </p>
       <div className="coding-benefit"><strong>你将获得：</strong></div>
       <ul>
@@ -28,8 +28,10 @@ const Coding = () => (
         <li>经历四期狂拽酷炫Pair Programming Game，感受代码改变世界的力量！</li>
       </ul>
     </div>
-    <Image image={'coding-宣传单页.jpg'}/>
-    {images.map((image, index) => renderImage(image, index))}
+    <p>
+      <Image image={'coding-宣传单页.jpg'}/>
+      {images.map((image, index) => renderImage(image, index))}
+    </p>
   </div>
 )
 
