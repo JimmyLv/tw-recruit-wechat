@@ -22,7 +22,7 @@ const speeches = [
 const Girl = () => (
   <div className="container">
     <NavSubTitle title="校园女生活动"/>
-    <div>ThoughtWorks努力倡导男女比例1:1，通过进入校园给女生们进行面对面的职场辅导与交流，骚窝希望可以帮助越来越多的菇娘爱上技术，在技术的路上坚持走下去~~~</div>
+    <div>ThoughtWorks努力倡导男女比例1:1，通过进入校园给女生们进行面对面的职场辅导与交流，思窝希望可以帮助越来越多的菇娘爱上技术，在技术的路上坚持走下去~~~</div>
     <Image image={'girl-女生活动1.jpg'}/>
     <div>ThoughtWorks进入电子科技大学、四川大学、成都信息工程大学等高校与校园女生展开职场互动交流，通过相关主题分享帮助女生更勇敢和坚定地选择自己的职场方向。</div>
     {speeches.map((speech, index) => <Speech key={index} speech={speech}/>)}

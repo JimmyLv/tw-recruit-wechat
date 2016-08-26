@@ -6,7 +6,7 @@ import './Main.less'
 const mainNav = [
   { title: '应聘校招', link: 'recruit', image: 'voice-of-the-customer.png' },
   { title: '校园活动', link: 'campus', image: 'campus-activities.png' },
-  { title: '了解公司', link: 'company', image: 'go-self-service-2.png' },
+  { title: '走进思窝', link: 'company', image: 'go-self-service-2.png' },
 ]
 
 const renderNav = ({ title, link, image }, index) => (
