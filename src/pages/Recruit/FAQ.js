@@ -1,6 +1,7 @@
 import React from 'react'
 
 import NavSubTitle from '../../components/NavSubTitle'
+import Image from '../../components/Image'
 import './FAQ.less'
 
 const renderFAQ = ({ question, answer }, index) => (
@@ -72,6 +73,15 @@ const Position = () => (
         <div className="faq-highlight">西安、成都、武汉、北京四地各招聘30+毕业生，招聘职位为软件开发工程师、软件测试工程师及技术领导管培生，每个职位不设具体名额。</div>
       </li>
       <li>
+        <strong>ThoughtWorks是一家什么公司？</strong>
+        <div>
+          <p>
+            ThoughtWorks,中文名称［思特沃克软件技术有限公司］，是一家全球软件设计与定制的领袖企业。ThoughtWorks自成立以来，一直处于技术和思想的前沿，致力于用软件技术帮忙客户解决棘手的问题，以获得商业上的成功！每一个ThoughtWorker心中也都有用软件知识和技术使整个人类社会变得更美好的梦想！关于公司详细信息可登录
+            <a href="http://www.thoughtworks.com/cn"> http://www.thoughtworks.com/cn</a> 浏览获取！
+          </p>
+        </div>
+      </li>
+      <li>
         <strong>2017 校园招聘宣讲会和笔试在什么时候开始？</strong>
         <div>
           <p>
@@ -80,15 +90,8 @@ const Position = () => (
           同时也请关注ThoughtWorks微信平台和新浪微博@ThoughtWorks招才猫姐，<span className="faq-highlight">或者添加校招微信账号：thoughtworks_hr </span>及时了解校招相关信息。
         </div>
       </li>
-      <li>
-        <strong>ThoughtWorks是一家什么公司？</strong>
-        <div>
-          <p>ThoughtWorks,中文名称［思特沃克软件技术有限公司］，是一家全球软件设计与定制的领袖企业。ThoughtWorks自成立以来，一直处于技术和思想的前沿，致力于用软件技术帮忙客户解决棘手的问题，以获得商业上的成功！每一个ThoughtWorker心中也都有用软件知识和技术使整个人类社会变得更美好的梦想！关于公司详细信息可登录
-             <a href="http://www.thoughtworks.com/cn"> http://www.thoughtworks.com/cn</a> 浏览获取！
-          </p>
-        </div>
-      </li>
     </ol>
+    <Image image={'wechat-qrcode.jpg'}/>
   </div>
 )
 

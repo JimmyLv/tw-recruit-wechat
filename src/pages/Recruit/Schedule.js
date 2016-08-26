@@ -1,6 +1,7 @@
 import React from 'react'
 
 import NavSubTitle from '../../components/NavSubTitle'
+import Image from '../../components/Image'
 import './Schedule.less'
 
 const renderProgresses = ({ image, description }, index, length) => (
@@ -39,6 +40,7 @@ const Schedule = () => (
     <p>
       同时也请关注ThoughtWorks微信平台和新浪微博@<strong>ThoughtWorks招才猫姐</strong>，或者添加校招微信账号：<strong>thoughtworks_hr</strong> 及时了解校招相关信息。
     </p>
+    <Image image={'wechat-qrcode.jpg'}/>
     <br/>
   </div>
 )
