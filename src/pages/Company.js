@@ -15,7 +15,7 @@ const navItems = [
 ]
 
 const renderItem = ({ title, link, image }, index) => (
-  <div key={index} className="col-xs-4 Company-nav">
+  <div key={index} className={index === 0 ? "col-xs-offset-2 col-xs-4 Company-nav": "col-xs-4 Company-nav"}>
     <Link to={`company/${link}`}>
       <NavItem title={title} image={image}/>
     </Link>
