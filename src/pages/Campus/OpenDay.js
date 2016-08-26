@@ -2,21 +2,32 @@ import React from 'react'
 
 import NavSubTitle from '../../components/NavSubTitle'
 import Image from '../../components/Image'
+import './index.less'
 
-const renderImage = ({ image, city, university }, index) => (
-  <Image key={index} image={image} title={`${university}来 ThoughtWorks ${city}办公室参观`}/>
+const renderImage = ({ image, city, title }, index) => (
+  <Image key={index} image={image} title={title}/>
 )
 
 const images = [
-  { city: '成都', university: '四川大学和电子科技大学学生', image: 'openday-成都.jpg' },
-  { city: '北京', university: '西安电子科技大学 “010” 暑假社区实践队', image: 'openday-西安.jpg' },
-  { city: '成都', university: '北京交通大学软件学院实践队', image: 'openday-成都1.png' },
+  { city: '成都', title: '互动游戏', image: 'openday-成都.jpg' },
+  { city: '北京', title: '主题分享', image: 'openday-session.jpg' },
+  { city: '成都', title: '公司参观', image: 'openday-share.jpg' },
+  { city: '成都', title: '座谈交流会', image: 'openday-成都1.png' },
 ]
 
 const OpenDay = () => (
   <div className="container">
     <NavSubTitle title="企业开放日"/>
-    <div>每年暑假，各地高校纷纷组织学校学生参加ThoughtWorks举办的企业开放日活动。企业开放日作为校企合作的一种实践形式，不仅建立起学生与企业沟通交流的纽带，还有助于公司品牌形象的深入，为企业后续的人才升级与校园招聘工作奠定坚实的基础。</div>
+    <div className="coding-description">
+      <p>每年暑假，各地高校纷纷组织学校学生参加 ThoughtWorks 举办的企业开放日活动。企业开放日作为校企合作的一种实践形式，不仅建立起学生与企业沟通交流的纽带，还有助于公司品牌形象的深入，为企业后续的人才升级与校园招聘工作奠定坚实的基础。</p>
+      <Image image={'openday.jpg'}/>
+      <div className="coding-benefit"><strong>你将获得：</strong></div>
+      <ul>
+        <li>你可以听到 IT程序媛职场心路历程发生了怎样的变化？</li>
+        <li>你也可以近距离与IT公司不同职位的女性从业者沟通，了解神秘工作背后的点点滴滴。</li>
+        <li>你可以听到同龄女生，走出象牙塔，初入职场的心路历程。</li>
+      </ul>
+    </div>
     {images.map((image, index) => renderImage(image, index))}
   </div>
 )
