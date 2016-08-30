@@ -30,7 +30,8 @@ const Schedule = () => (
     {progresses.map((p, index) => renderProgresses(p, index, progresses.length))}
 
     <NavSubTitle title="宣讲会安排"/>
-    <p>ThoughtWorks校园宣讲会将于十月十日左右登陆北京、成都、西安和武汉地区，同学们要及时关注校招网  站内公告栏里的宣讲日期，敬请期待！
+    <p>ThoughtWorks校园宣讲会将于十月十日左右登陆北京、成都、西安和武汉地区，同学们要及时关注校招网 站内公告栏里的宣讲日期，敬请期待！</p>
+    <p>
       <ul>
         <li>成都行：四川大学望江校区，四川大学江安校区，成都电子科技大学清水河校区</li>
         <li>西安行：西北大学本部，西北工业大学本部，西安电子科技大学本部，西安交通大学本部</li>
