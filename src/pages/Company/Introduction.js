@@ -61,10 +61,10 @@ const Introduction = () => (
 
     <NavSubTitle title="公司核心业务"/>
     <p>
-      1、交付：研发人员会为客户量身定制软件开发解决方案，同时也会直接为客户交付这些最具核心价值的软件。在开发过程中，很多客户为以被ThoughtWorks影响为荣，他们的CTO、技术高管会轮换在我们的办公室里一直和我们一起工作，紧密交流和沟通，共同交付。
+      1、<strong>交付</strong>：研发人员会为客户量身定制软件开发解决方案，同时也会直接为客户交付这些最具核心价值的软件。在开发过程中，很多客户为以被ThoughtWorks影响为荣，他们的CTO、技术高管会轮换在我们的办公室里一直和我们一起工作，紧密交流和沟通，共同交付。
     </p>
     <p>
-      2、咨询培训：咨询师会在客户现场，帮助改善企业的IT组织，改进软件开发方法，以软件带动企业业务发展。我们的咨询类型包括：IT组织优化- 技术咨询- 测试策略- 客户体验- 敏捷转型。
+      2、<strong>咨询培训</strong>：咨询师会在客户现场，帮助改善企业的IT组织，改进软件开发方法，以软件带动企业业务发展。我们的咨询类型包括：IT组织优化- 技术咨询- 测试策略- 客户体验- 敏捷转型。
     </p>
 
     <NavSubTitle title="思窝牛人在身边"/>
@@ -76,12 +76,8 @@ const Introduction = () => (
     </div>
     <NavSubTitle title="更多了解ThoughtWorks"/>
     <p>
-      <p>
-        视频链接：<a href="http://v.qq.com/page/v/k/r/v0310xz6qkr.html">http://v.qq.com/page/v/k/r/v0310xz6qkr.html</a>
-      </p>
-      <p>
-        <iframe className="col-sm-12 col-xs-12" src="http://v.qq.com/iframe/player.html?vid=v0310xz6qkr&tiny=0&auto=0"></iframe>
-      </p>
+      <iframe className="col-sm-12 col-xs-12" src="http://v.qq.com/iframe/player.html?vid=v0310xz6qkr&tiny=0&auto=0"></iframe>
+      <a className="text-center" href="http://v.qq.com/page/v/k/r/v0310xz6qkr.html">http://v.qq.com/page/v/k/r/v0310xz6qkr.html</a>
     </p>
   </div>
 )

@@ -76,7 +76,7 @@ const Position = () => (
         <strong>ThoughtWorks是一家什么公司？</strong>
         <div>
           <p>
-            ThoughtWorks，中文名称［思特沃克软件技术有限公司］，是一家全球软件设计与定制的领袖企业。ThoughtWorks 自成立以来，一直处于技术和思想的前沿，致力于用软件技术帮忙客户解决棘手的问题，以获得商业上的成功！每一个 ThoughtWorker 心中也都有用软件知识和技术使整个人类社会变得更美好的梦想！
+            ThoughtWorks，中文名称「思特沃克软件技术有限公司」，是一家全球软件设计与定制的领袖企业。ThoughtWorks 自成立以来，一直处于技术和思想的前沿，致力于用软件技术帮忙客户解决棘手的问题，以获得商业上的成功！每一个 ThoughtWorker 心中也都有用软件知识和技术使整个人类社会变得更美好的梦想！
             关于公司详细信息可登录 <br/><a href="http://www.thoughtworks.com/cn">http://www.thoughtworks.com/cn</a> 浏览获取！
           </p>
         </div>

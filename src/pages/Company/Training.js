@@ -3,13 +3,13 @@ import React from 'react'
 import NavSubTitle from '../../components/NavSubTitle'
 import Image from '../../components/Image'
 
-import './Training.css'
+import './Training.less'
 
-const Activity = () => (
-  <div className="container">
+const Training = () => (
+  <div className="container Training">
     <NavSubTitle title="TWU"/>
     <p>
-      TWU，即ThoughtWorks University ，是ThoughtWorks针对世界各地的应届毕业生推出的为期五周的“公派留学”。不同国籍、不同office的ThoughtWorkers将在印度齐聚一堂，共同度过五周的难忘时光。
+      TWU，即 ThoughtWorks University，ThoughtWorks 针对世界各地的应届毕业生推出的为期五周的“公派留学”。不同国籍、不同office的ThoughtWorkers将在印度齐聚一堂，共同度过五周的难忘时光。
       <Image image={'TWU1.jpg'}/>
     </p>
     <p>
@@ -18,9 +18,9 @@ const Activity = () => (
     </p>
     <NavSubTitle title="Buddy&Sponsor"/>
     <p>
-      新人入职后，都会被分配一个TA在TW的“领路人”，我们称之为“Buddy”；
+      新人入职后，都会被分配一个TA在TW的“领路人”，我们称之为“Buddy”。
+      <div className="description"><strong>Buddy（小伙伴）是什么呢？</strong></div>
       <ul className="buddy-sponsor">
-        <li>Buddy（小伙伴）是什么呢？</li>
         <li>TW文化的典型</li>
         <li>新人分诊台，咨询的窗口</li>
         <li>值得信赖的伙伴</li>
@@ -29,12 +29,13 @@ const Activity = () => (
       </ul>
     </p>
     <p>
-      入职六个月后，针对顺利转正的员工，公司会邀请进入Sponsor机制；通过考核，你就有机会成为Sponsor，Sponsor参与什么呢？
+      入职六个月后，针对顺利转正的员工，只要通过考核，你就有机会成为Sponsor。
+      <div className="description"><strong>Sponsor参与什么呢？</strong></div>
       <ul className="buddy-sponsor">
-        <li>内部新的机会的建议;</li>
-        <li>帮助寻找新的资源,创造新的机会;</li>
-        <li>建议参加的内部外部培训课程;</li>
-        <li>帮助 sponsee 成为 sponsor ；</li>
+        <li>内部新的机会的建议</li>
+        <li>帮助寻找新的资源,创造新的机会</li>
+        <li>建议参加的内部外部培训课程</li>
+        <li>帮助 sponsee 成为 sponsor</li>
       </ul>
       <Image image={'Buddy&Sponsor.jpg'}/>
     </p>
@@ -48,4 +49,4 @@ const Activity = () => (
   </div>
 )
 
-export default Activity
+export default Training

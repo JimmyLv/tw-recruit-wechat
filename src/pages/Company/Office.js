@@ -3,7 +3,7 @@ import React from 'react'
 import NavSubTitle from '../../components/NavSubTitle'
 import Image from '../../components/Image'
 
-import './Training.css'
+import './Training.less'
 
 const renderOffice = (office, index) => (
   <div key={index}>
