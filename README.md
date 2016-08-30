@@ -11,7 +11,7 @@ Status](https://img.shields.io/david/dev/JimmyLv/tw-recruit-wechat.svg?style=fla
 
 ## Demos
 
-[![](./tw-recruit-wechat-2.png)](https://ocew5x9u9.qnssl.com)
+[![](./tw-recruit-wechat-2.png)](https://jimmylv.github.io/tw-recruit-wechat/)
 
 ## Getting Started
 
