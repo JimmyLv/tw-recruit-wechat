@@ -19,7 +19,7 @@ const OpenDay = () => (
   <div className="container">
     <NavSubTitle title="企业开放日"/>
     <div className="coding-description">
-      <p>每年暑假，各地高校纷纷组织学校学生参加 ThoughtWorks 举办的企业开放日活动。企业开放日作为校企合作的一种实践形式，不仅建立起学生与企业沟通交流的纽带，还有助于公司品牌形象的深入，为企业后续的人才升级与校园招聘工作奠定坚实的基础。</p>
+      <p>每年暑假，ThoughtWorks会与各地高校合作，组织学校学生参加企业开放日活动。帮助学生近距离接触ThoughtWorks，了解企业的工作方式和文化氛围，也能让学生提前get到企业的发展方向和工作体验。</p>
       <Image image={'openday.jpg'}/>
       <div className="coding-benefit"><strong>你将获得：</strong></div>
       <ul>

@@ -7,7 +7,7 @@ import './Benefit.less'
 const Benefit = () => (
   <div className="container Benefit">
     <NavSubTitle title="基本福利"/>
-    <table className="table table-bordered table-hover">
+    <table className="table">
       <tbody>
       <tr>
         <th>五险一金</th>
@@ -25,7 +25,7 @@ const Benefit = () => (
     </table>
 
     <NavSubTitle title="假期福利"/>
-    <table className="table table-bordered table-hover">
+    <table className="table">
       <tbody>
       <tr>
         <th>年假</th>
@@ -47,7 +47,7 @@ const Benefit = () => (
     </table>
 
     <NavSubTitle title="其他福利"/>
-    <table className="table table-bordered table-hover table-striped">
+    <table className="table">
       <tbody>
       <tr>
         <th>3.8 妇女节、端午节、中秋节、春节等</th>
