@@ -15,8 +15,8 @@ const questions = [
   { question: '公司有针对新员工的培训项目吗？', answer: '公司会从你接受Offer起就制订一系列的培训课程，包括在印度与其他十几个国家毕业生一起参与的毕业生培训。入职后一对一的小伙伴帮助计划也是帮你快速成长及融入新环境的最佳方式。' },
   { question: '如被录用，能否提前到公司实习？', answer: '各个城市的办公室对实习生需求不同，愿意实习的同学可在征求学校和导师同意后与你所在城市的HR沟通。' },
   { question: '如果在应聘的过程中被拒，是否会有相关通知？', answer: '在应聘过程中如果被拒，我们会发邮件到同学的注册邮箱；同时也可以登录我们的校招平台或者我们的校招微信公众号查看个人应聘状态。' },
-  { question: '2016年校园招聘整个流程有多久？', answer: '10天左右，10月底前后将对拟录用的同学发录用通知。' },
-  { question: '怎样知道简历通过初步筛选得到笔试或面试机会呢？', answer: '简历通过的同学，将在宣讲会开始前提前收到公司的宣讲会及笔试手机短信邀请。通过每一轮的同学也会在2天内收到下一轮的短信通知；同时也可以在我们的校招平台查询个人状态信息。' },
+  { question: 'ThoughtWorks 2017校园招聘整个流程有多久？', answer: '10天左右，10月底前后将对拟录用的同学发录用通知。' },
+  { question: '怎样知道简历通过初步筛选得到笔试或面试机会呢？', answer: '简历通过的同学，将在宣讲会开始前提前收到公司的宣讲会及笔试手机短信邀请。通过每一轮的同学也会在2天内收到下一轮的短信通知；同时也可以在我们的校招平台和校园招聘官方微信查询个人状态信息。' },
   {
     question: '假如我在成都，但是毕业后想去西安工作，我应该申请哪个城市的流程？我对最终的工作城市是否有自主选择权？',
     answer: 'ThoughtWorks各城市校招流程相同，你无须专程前往你想工作的城市参加招聘流程，只需在当地就近参加即可。录用后会根据你的工作城市意向来和你商议最终工作地点滴。'
@@ -25,13 +25,13 @@ const questions = [
 ]
 
 const questions2 = [
-  { question: '我是往届的毕业生，能参加2016年校园招聘吗?', answer: '校园招聘只针对应届毕业生，今年校招具体指2016年毕业的应届毕业生。如果是往届生，请参加我们的社招流程哈~~' },
+  { question: '我是往届的毕业生，能参加今年的校园招聘吗?', answer: '校园招聘只针对应届毕业生，今年校招具体指2017年毕业的应届毕业生。如果是往届生，请参加我们的社招流程哈~~' },
   {
     question: '校园招聘宣讲会现场是否接受简历申请？',
     answer: '很抱歉，宣讲会现场不接受简历。同学们需要在参加宣讲会之前在线注册简历成功，以确保可以及时参加校招流程并获知ThoughtWorks校园行的任何更新。若参加宣讲会前没有注册简历，请于之后立即在ThoughtWorks校园招聘网站上注册。'
   },
   {
-    question: 'ThoughtWorks校园招聘网上申请有期限的限制吗？',
+    question: 'ThoughtWorks 2017 校园招聘网上申请有期限的限制吗？',
     answer: '2017校园招聘宣讲会之前提交简历都是有效的哦。宣讲会当天结束后就安排笔试，具体时间我们会在微信，微博和校园BBS等平台发布。请关注！过了截止时间，虽然还可以在线注册简历，遗憾的是，我们将无法考虑你的应聘申请了。'
   },
   { question: '对应聘者的条件有什么要求呢？', answer: '专业，院校，是否211，男生还是女生，英语水平如何都没有限制。只要你是热爱软件行业，充满正能量的人~~' },
@@ -43,7 +43,7 @@ const Position = () => (
     <ol className="faq-list">
       <li>
         <strong>如果对ThoughtWorks校园招聘有问题，有什么方式可以咨询吗？</strong>
-        <div>可以通过TW招聘微博@ThoughtWorks招才猫姐咨询，或者添加校招微信账号：thoughtworks_hr；或登录校园招聘系统留言以及宣讲会互动问答环节提问，工作人员也可为你答疑解惑。</div>
+        <p>可以关注TW校招微信 <span className="faq-keyword">@ThoughtWorks校园招聘</span> 与我们联系，或者通过TW招聘微博 <span className="faq-keyword">@ThoughtWorks招才猫姐</span> 咨询；或登录校园招聘系统留言以及宣讲会互动问答环节提问，工作人员也可为你答疑解惑。</p>
       </li>
       <li>
         <strong>如被录用，档案户口落在哪里？什么时候可以入职？</strong>
@@ -58,7 +58,7 @@ const Position = () => (
       </li>
       {questions.map((faq, index) => renderFAQ(faq, index))}
       <li>
-        <strong>2016 ThoughtWorks校园招聘将去哪些学校捏？</strong>
+        <strong>ThoughtWorks 2017 校园招聘将去哪些学校捏？</strong>
         <div>校园行覆盖西安、成都、武汉、北京四个城市。</div>
         <ul className="faq-highlight">
           <li>成都行：四川大学望江校区，四川大学江安校区，成都电子科技大学清水河校区</li>
@@ -76,19 +76,17 @@ const Position = () => (
         <strong>ThoughtWorks是一家什么公司？</strong>
         <div>
           <p>
-            ThoughtWorks,中文名称［思特沃克软件技术有限公司］，是一家全球软件设计与定制的领袖企业。ThoughtWorks自成立以来，一直处于技术和思想的前沿，致力于用软件技术帮忙客户解决棘手的问题，以获得商业上的成功！每一个ThoughtWorker心中也都有用软件知识和技术使整个人类社会变得更美好的梦想！关于公司详细信息可登录
-            <a href="http://www.thoughtworks.com/cn"> http://www.thoughtworks.com/cn</a> 浏览获取！
+            ThoughtWorks，中文名称［思特沃克软件技术有限公司］，是一家全球软件设计与定制的领袖企业。ThoughtWorks 自成立以来，一直处于技术和思想的前沿，致力于用软件技术帮忙客户解决棘手的问题，以获得商业上的成功！每一个 ThoughtWorker 心中也都有用软件知识和技术使整个人类社会变得更美好的梦想！
+            关于公司详细信息可登录 <br/><a href="http://www.thoughtworks.com/cn">http://www.thoughtworks.com/cn</a> 浏览获取！
           </p>
         </div>
       </li>
       <li>
         <strong>2017 校园招聘宣讲会和笔试在什么时候开始？</strong>
-        <div>
-          <p>
-            西安将会在9月21-24号这周进行，十一假期之后，武汉，成都，北京三地校园行同步进行，同学们要及时关注校招网站内公告栏里的宣讲日期，做好准备噢。
-          </p>
-          同时也请关注ThoughtWorks微信平台和新浪微博@ThoughtWorks招才猫姐，<span className="faq-highlight">或者添加校招微信账号：thoughtworks_hr </span>及时了解校招相关信息。
-        </div>
+        <p>
+          西安，武汉，成都，北京四地校园行将在十月中旬同步进行，同学们要及时关注校招网站内公告栏里的宣讲日期，做好准备噢。
+          同时也请关注校园招聘微信平台 <span className="faq-keyword">@ThoughtWorks校园招聘</span> 和新浪微博 <span className="faq-keyword">@ThoughtWorks招才猫姐</span> 及时了解校招相关信息。
+        </p>
       </li>
     </ol>
     <Image image={'wechat-qrcode.jpg'}/>

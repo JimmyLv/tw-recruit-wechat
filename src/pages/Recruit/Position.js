@@ -5,37 +5,47 @@ import './Position.less'
 
 const Position = () => (
   <div className="container">
-    <NavSubTitle title="软件开发／测试工程师"/>
+    <NavSubTitle title="软件开发工程师"/>
     <p className="roles">
       <div className="role-description"><strong>工作地点：</strong></div>
       <span className="address">北京、西安、成都、武汉</span>
-      <div className="role-description"><strong>ThoughtWorks需要你</strong></div>
+      <div className="role-description"><strong>ThoughtWorks需要你：</strong></div>
       <ul>
-        <li>学习能力非常强</li>
-        <li>非常的热爱技术，是真正的舍得花时间的那种热爱</li>
-        <li>喜欢讨论技术，分享技术</li>
-        <li>重视对于团队和客户的承诺</li>
-        <li>希望未来的几年里挑战不同的技术，扩大视野</li>
+        <li>进行系统框架和代码的实现</li>
+        <li>自动化单元测试，集成测试的实现</li>
+        <li>参与自动化部署流水线的实现与维护</li>
+        <li>解决开发过程中的技术问题</li>
+        <li>参与系统的需求调研和需求分析，扩大视野</li>
       </ul>
-      <div className="role-description"><strong>同时我们不需要你</strong></div>
+      <div className="role-description"><strong>我们期望你是：</strong></div>
       <ul>
-        <li>毕业于顶级知名高校</li>
-        <li>自带流利的英文，甚至普通话</li>
-        <li>一定是计算机相关专业毕业，做过很多项目</li>
+        <li>具备良好的团队协作意识，主动思考，自我驱动，热爱学习，能够在压力下高效工作，以结果和行动为准则，努力追求成功</li>
+        <li>具备扎实的软件工程知识，包括设计、开发和测试的相关流程</li>
+        <li>熟练掌握一种以上主流开发语言(C/C++/C#/Java/Ruby/Python)或Web开发技术(主流开发框架/HTML/CSS/JavaScript等)</li>
+        <li>善于沟通，能够成为一名积极、乐于分享的团队成员</li>
       </ul>
-      <div className="role-description"><strong>加入ThoughtWorks是一种怎样的体验？</strong></div>
+    </p>
+
+    <NavSubTitle title="软件测试工程师"/>
+    <p className="roles">
+      <div className="role-description"><strong>工作地点：</strong></div>
+      <span className="address">北京、西安、成都、武汉</span>
+      <div className="role-description"><strong>ThoughtWorks需要你：</strong></div>
       <ul>
-        <li>全球化，最前沿的技术资源，不同国家之间没有技术壁垒</li>
-        <li>入职五周的公派留学，未来参与公司平均“10%比例”的海外出差项目</li>
-        <li>跟世界上最活跃的程序员一起工作，学习，编程，分享，接受挑战</li>
-        <li>为全球各行业最顶尖的客户、最重要的IT项目提供专业服务</li>
+        <li>跟不同角色沟通，确保团队对需求理解的一致性</li>
+        <li>设计测试用例并执行</li>
+        <li>设计和实现功能测试自动化</li>
+        <li>报告、管理和分析缺陷</li>
+        <li>宏观掌控项目产品质量信息，并及时反馈给团队</li>
       </ul>
-      <div className="role-description"><strong>那么你需要付出什么？</strong></div>
+      <div className="role-description"><strong>我们期望你是：</strong></div>
       <ul>
-        <li>更多的时间去学习，实践技术</li>
-        <li>你需要适应出差。国内国外的出差都有可能</li>
-        <li>你需要更主动去了解你喜欢的技术和项目，快速成长</li>
-        <li>你需要建立自己的影响力，在这样一个扁平而自由的组织里，我们需要你精彩的发声</li>
+        <li>熟悉至少一种编程语言，有一定的编码能力</li>
+        <li>具备基本的数据库操作能力</li>
+        <li>拥有快速理解业务的能力</li>
+        <li>具备很强的分析能力和定位问题的能力</li>
+        <li>具备良好的沟通表达能力，包括口头和书面沟通</li>
+        <li>踏实、认真、细心，并对软件测试工作有浓厚的兴趣</li>
       </ul>
     </p>
 
