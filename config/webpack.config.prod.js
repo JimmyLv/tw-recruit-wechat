@@ -37,7 +37,7 @@ module.exports = {
     chunkFilename: '[name].chunk.js',
     // TODO: this wouldn't work for e.g. GH Pages.
     // Good news: we can infer it from package.json :-)
-    publicPath: '//ocew5x9u9.qnssl.com/'
+    publicPath: '//ocry84hjg.qnssl.com/'
   },
   resolve: {
     extensions: ['', '.js'],
