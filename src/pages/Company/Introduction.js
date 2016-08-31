@@ -77,7 +77,7 @@ const Introduction = () => (
     <NavSubTitle title="更多了解ThoughtWorks"/>
     <p>
       <iframe className="col-sm-12 col-xs-12" src="http://v.qq.com/iframe/player.html?vid=v0310xz6qkr&tiny=0&auto=0"></iframe>
-      <a className="text-center" href="http://v.qq.com/page/v/k/r/v0310xz6qkr.html">http://v.qq.com/page/v/k/r/v0310xz6qkr.html</a>
+      {/*<a className="text-center" href="http://v.qq.com/page/v/k/r/v0310xz6qkr.html">http://v.qq.com/page/v/k/r/v0310xz6qkr.html</a>*/}
     </p>
   </div>
 )
