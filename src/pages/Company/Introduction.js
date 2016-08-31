@@ -76,7 +76,7 @@ const Introduction = () => (
     </div>
     <NavSubTitle title="更多了解ThoughtWorks"/>
     <p>
-      <video width="100%" controls>
+      <video width="100%" controls="true">
         <source
           src="http://116.211.73.12/vhot2.qqvideo.tc.qq.com/v0310xz6qkr.m701.mp4?vkey=4C3CB5893476FCCE69694A06E9FC3555704F84C5B99895A391BEF0D467EBDF1EC0B3BA46823C25AC8DEA8EF8C0CA65B274024EA30223A73CB6362D45AB170F53F27FABE7D9BE590A2DD6906C7DCEDC7A8E0DEC1692CAF5CD&amp;br=29&amp;platform=2&amp;fmt=auto&amp;level=0&amp;sdtfrom=v3010"
           type="video/mp4"/>
