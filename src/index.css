@@ -7,4 +7,6 @@ body {
 
 p {
   text-align:justify;
+  text-justify: distribute;
+  text-rendering: optimizeLegibility;
 }
