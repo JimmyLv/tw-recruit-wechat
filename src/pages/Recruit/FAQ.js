@@ -21,7 +21,18 @@ const questions = [
     question: '假如我在成都，但是毕业后想去西安工作，我应该申请哪个城市的流程？我对最终的工作城市是否有自主选择权？',
     answer: 'ThoughtWorks各城市校招流程相同，你无须专程前往你想工作的城市参加招聘流程，只需在当地就近参加即可。录用后会根据你的工作城市意向来和你商议最终工作地点滴。'
   },
-  { question: '我们学校不在公司校园招聘所在的城市列表中，我可以报名参加吗？', answer: '当然可以啦！在哪里都可以申请。你可以就近选择城市和学校参加宣讲及校招流程。' },
+  {
+    question: '我们学校不在公司校园招聘所在的城市列表中，我可以报名参加吗？',
+    answer: '当然可以啦！在哪里都可以申请。你可以就近选择城市和学校参加宣讲及校招流程。'
+  },
+  {
+    question: '我所在城市没有ThoughtWorks办公室，怎么办呢？',
+    answer: '如果你所在的城市没有举行ThoughtWorks校园宣讲会，（我们校招宣讲的城市包括：成都、西安、武汉、北京）请选择这四所分公司任选其一参加面试。HR姐姐们也不希望童鞋们舟车劳顿太累哦，请尽量选择离自己地理位置最近的城市，所以简历投递时请认真☑️相应的”面试城市“和”期望工作城市“哦。'
+  },
+  {
+    question: '我现在在英国，本月赶不及回国参加面试，怎么办呢？',
+    answer: '由于地理位置太远，没有办法去到这四所城市（成都、西安、武汉、北京）参加面试，我们会有工作人员定向联系你安排远程面试。那么简历投递时请确保邮箱和手机号正确，☑️异地面试选项并选择好未来期望工作城市。'
+  },
 ]
 
 const questions2 = [
@@ -43,7 +54,8 @@ const Position = () => (
     <ol className="faq-list">
       <li>
         <strong>如果对ThoughtWorks校园招聘有问题，有什么方式可以咨询吗？</strong>
-        <p>可以关注TW校招微信 <span className="faq-keyword">@ThoughtWorks校园招聘</span> 与我们联系，或者通过TW招聘微博 <span className="faq-keyword">@ThoughtWorks招才猫姐</span> 咨询；或登录校园招聘系统留言以及宣讲会互动问答环节提问，工作人员也可为你答疑解惑。</p>
+        <p>可以关注TW校招微信 <span className="faq-keyword">@ThoughtWorks校园招聘</span> 与我们联系，或者通过TW招聘微博 <span className="faq-keyword">@ThoughtWorks招才猫姐</span>
+          咨询；或登录校园招聘系统留言以及宣讲会互动问答环节提问，工作人员也可为你答疑解惑。</p>
       </li>
       <li>
         <strong>如被录用，档案户口落在哪里？什么时候可以入职？</strong>
@@ -60,8 +72,8 @@ const Position = () => (
       <li>
         <strong>ThoughtWorks 2017 校园招聘将去哪些学校捏？</strong>
         <div>校园行覆盖西安、成都、武汉、北京四个城市。</div>
-        <ul className="faq-highlight">
-          <li>成都行：四川大学望江校区，四川大学江安校区，成都电子科技大学清水河校区</li>
+        <ul>
+          <li>成都行：四川大学望江校区，成都电子科技大学清水河校区</li>
           <li>西安行：西北大学本部，西北工业大学本部，西安电子科技大学本部，西安交通大学本部</li>
           <li>武汉行：武汉大学，武汉华中科技大学</li>
           <li>北京行：北京交通大学，北京理工大学</li>
@@ -70,13 +82,14 @@ const Position = () => (
       {questions2.map((faq, index) => renderFAQ(faq, index))}
       <li>
         <strong>公司本次的招聘岗位及数量如何?有什么限制吗？</strong>
-        <div className="faq-highlight">西安、成都、武汉、北京四地各招聘30+毕业生，招聘职位为软件开发工程师、软件测试工程师及技术领导管培生，每个职位不设具体名额。</div>
+        <div>西安、成都、武汉、北京四地各招聘30+毕业生，招聘职位为软件开发工程师、软件测试工程师及技术领导管培生，每个职位不设具体名额。</div>
       </li>
       <li>
         <strong>ThoughtWorks是一家什么公司？</strong>
         <div>
           <p>
-            ThoughtWorks，中文名称「思特沃克软件技术有限公司」，是一家全球软件设计与定制的领袖企业。ThoughtWorks 自成立以来，一直处于技术和思想的前沿，致力于用软件技术帮忙客户解决棘手的问题，以获得商业上的成功！每一个 ThoughtWorker 心中也都有用软件知识和技术使整个人类社会变得更美好的梦想！
+            ThoughtWorks，中文名称「思特沃克软件技术有限公司」，是一家全球软件设计与定制的领袖企业。ThoughtWorks 自成立以来，一直处于技术和思想的前沿，致力于用软件技术帮忙客户解决棘手的问题，以获得商业上的成功！每一个 ThoughtWorker
+            心中也都有用软件知识和技术使整个人类社会变得更美好的梦想！
             <br/>
             关于公司详细信息可登录官网进行浏览：<br/><a href="http://www.thoughtworks.com/cn">http://www.thoughtworks.com/cn</a>
           </p>
@@ -85,8 +98,9 @@ const Position = () => (
       <li>
         <strong>2017 校园招聘宣讲会和笔试在什么时候开始？</strong>
         <p>
-          西安，武汉，成都，北京四地校园行将在十月中旬同步进行，同学们要及时关注校招网站内公告栏里的宣讲日期，做好准备噢。
-          同时也请关注校园招聘微信平台 <span className="faq-keyword">@ThoughtWorks校园招聘</span> 和新浪微博 <span className="faq-keyword">@ThoughtWorks招才猫姐</span> 及时了解校招相关信息。
+          西安，武汉，成都，北京四地校园行将在十月十日左右同步进行，同学们要及时关注校招网站内公告栏里的宣讲日期，做好准备噢。
+          同时也请关注校园招聘微信平台 <span className="faq-keyword">@ThoughtWorks校园招聘</span> 和新浪微博 <span className="faq-keyword">@ThoughtWorks招才猫姐</span>
+          及时了解校招相关信息。
         </p>
       </li>
     </ol>
