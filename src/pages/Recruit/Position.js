@@ -21,7 +21,7 @@ const Position = () => (
       <ul>
         <li>具备良好的团队协作意识，主动思考，自我驱动，热爱学习，能够在压力下高效工作，以结果和行动为准则，努力追求成功</li>
         <li>具备扎实的软件工程知识，包括设计、开发和测试的相关流程</li>
-        <li>熟练掌握一种以上主流开发语言(C/C++/C#/Java/Ruby/Python)或Web开发技术(主流开发框架/HTML/CSS/JavaScript等)</li>
+        <li className="no-justify">熟练掌握一种以上主流开发语言(C/C++/C#/Java/Ruby/Python)或Web开发技术(主流开发框架/HTML/CSS/JavaScript等)</li>
         <li>善于沟通，能够成为一名积极、乐于分享的团队成员</li>
       </ul>
     </p>
@@ -54,12 +54,12 @@ const Position = () => (
       <div className="role-description"><strong>工作地点：</strong></div>
       <span className="address">北京、西安、成都、武汉</span>
       <div className="role-description"><strong>什么是管理培训生计划？</strong></div>
-      <p>管培生计划指公司招聘具有最高相关潜力的毕业生，作为未来的管理层预备队，并为他们特别打造的小而精的系统性培养计划。计划的实施，通常由公司最高水准的相关领导者直接负责，通过整合各种公司资源，帮助其有计划有针对性的轮岗，完成对公司业务的全面了解。同时，会挖掘其深度和视野，帮助其最快速成长承担重要的责任。
+      <p>
+        管培生计划指公司招聘具有最高相关潜力的毕业生，作为未来的管理层预备队，并为他们特别打造的小而精的系统性培养计划。计划的实施，通常由公司最高水准的相关领导者直接负责，通过整合各种公司资源，帮助其有计划有针对性的轮岗，完成对公司业务的全面了解。同时，会挖掘其深度和视野，帮助其最快速成长承担重要的责任。
       </p>
       <p>由于管理委培会占用公司大量的资源，通常会有更严格的考核和退出机制，在薪资上也会做出相应的补充</p>
       <div className="role-description"><strong>ThoughtWorks的技术管培生是一种什么样的体验？</strong></div>
-      ThoughtWorks招聘的技术领导管培生：与其他公司的管培生略有不同，我们要培养技术领导者，即一家信息技术服务公司的：Solution Architect（解决方案架构师）, Product Manager（产品经理）, Account Tech
-      Principal（客户技术领导者）。主要能力包括：
+      ThoughtWorks招聘的技术领导管培生：与其他公司的管培生略有不同，我们要培养技术领导者，即一家信息技术服务公司的：Solution Architect（解决方案架构师），Account Tech Principal（客户技术领导者）。主要能力包括：
       <ul>
         <li>全面深入的技术能力</li>
         <li>管理技巧、变革管理能力</li>

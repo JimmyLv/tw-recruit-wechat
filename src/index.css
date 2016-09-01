@@ -10,3 +10,7 @@ p {
   text-justify: distribute;
   text-rendering: optimizeLegibility;
 }
+
+.no-justify {
+  text-align:left;
+}

@@ -9,7 +9,7 @@ const Training = () => (
   <div className="container Training">
     <NavSubTitle title="TWU"/>
     <p>
-      TWU，即 ThoughtWorks University，ThoughtWorks 针对世界各地的应届毕业生推出的为期五周的“公派留学”。不同国籍、不同office的ThoughtWorkers将在印度齐聚一堂，共同度过五周的难忘时光。
+      TWU，即 ThoughtWorks University，是 ThoughtWorks 针对世界各地的应届毕业生推出的为期五周的“公派留学”。不同国籍、不同office的ThoughtWorkers将在印度齐聚一堂，共同度过五周的难忘时光。
       <Image image={'TWU1.jpg'}/>
     </p>
     <p>

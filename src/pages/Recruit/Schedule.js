@@ -31,7 +31,7 @@ const Schedule = () => (
     {progresses.map((p, index) => renderProgresses(p, index, progresses.length))}
 
     <NavSubTitle title="宣讲会安排"/>
-    <p>ThoughtWorks校园宣讲会将于十月十日左右登陆北京、成都、西安和武汉地区，同学们要及时关注校招网  站内公告栏里的宣讲日期，敬请期待！</p>
+    <p>ThoughtWorks校园宣讲会将于十月十日左右登陆北京、成都、西安和武汉地区，同学们要及时关注校招网站内公告栏里的宣讲日期，敬请期待！</p>
     <p>
       <ul>
         <li>成都行：四川大学望江校区，成都电子科技大学清水河校区</li>
@@ -40,8 +40,8 @@ const Schedule = () => (
         <li>北京行：北京交通大学，北京理工大学</li>
       </ul>
     </p>
-    <p>
-      同时也请关注校园招聘微信平台 <span className="faq-keyword">@ThoughtWorks校园招聘</span> 和新浪微博 <span className="faq-keyword">@ThoughtWorks招才猫姐</span> 及时了解校招相关信息。
+    <p className="no-justify">
+      同时也请关注校园招聘官方微信平台 <span className="faq-keyword">@ThoughtWorks校园招聘</span> 及时了解校招相关信息。
     </p>
     <Image image={'wechat-qrcode.jpg'}/>
     <br/>

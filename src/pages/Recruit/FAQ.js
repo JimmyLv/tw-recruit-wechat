@@ -54,8 +54,7 @@ const Position = () => (
     <ol className="faq-list">
       <li>
         <strong>如果对ThoughtWorks校园招聘有问题，有什么方式可以咨询吗？</strong>
-        <p>可以关注TW校招微信 <span className="faq-keyword">@ThoughtWorks校园招聘</span> 与我们联系，或者通过TW招聘微博 <span className="faq-keyword">@ThoughtWorks招才猫姐</span>
-          咨询；或登录校园招聘系统留言以及宣讲会互动问答环节提问，工作人员也可为你答疑解惑。</p>
+        <p>可以关注TW校招微信 <span className="faq-keyword">@ThoughtWorks校园招聘</span> 与我们联系；或登录校园招聘系统留言以及宣讲会互动问答环节提问，工作人员也可为你答疑解惑。</p>
       </li>
       <li>
         <strong>如被录用，档案户口落在哪里？什么时候可以入职？</strong>
@@ -99,8 +98,7 @@ const Position = () => (
         <strong>2017 校园招聘宣讲会和笔试在什么时候开始？</strong>
         <p>
           西安，武汉，成都，北京四地校园行将在十月十日左右同步进行，同学们要及时关注校招网站内公告栏里的宣讲日期，做好准备噢。
-          同时也请关注校园招聘微信平台 <span className="faq-keyword">@ThoughtWorks校园招聘</span> 和新浪微博 <span className="faq-keyword">@ThoughtWorks招才猫姐</span>
-          及时了解校招相关信息。
+          同时也请关注校园招聘微信平台 <span className="faq-keyword">@ThoughtWorks校园招聘</span> 及时了解校招相关信息。
         </p>
       </li>
     </ol>

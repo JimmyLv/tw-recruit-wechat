@@ -12,7 +12,7 @@ const Announce = () => (
       <ol>
         <li><strong>面向人群</strong>：2017 年应届毕业生</li>
         <li><strong>招聘职位</strong>：软件开发工程师、软件测试工程师、技术领导管培生</li>
-        <li><strong>应聘方式</strong>：登陆 <a href="http://join.thoughtworks.cn">http://join.thoughtworks.cn</a> 注册并投递简历！</li>
+        <li className="no-justify"><strong>应聘方式</strong>：登录校招官网进行注册并投递简历，<a href="http://join.thoughtworks.cn">http://join.thoughtworks.cn</a></li>
       </ol>
     </p>
 
