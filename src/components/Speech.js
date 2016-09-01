@@ -6,7 +6,7 @@ import './Speech.less'
 const Speech = ({ speech }) => {
   const { topic, speaker, content, image } = speech
   return (
-    <div className="speech">
+    <p className="speech">
       <div className="text-center">
         <h4 className="topic">
           {`主题：《${topic}》`}
@@ -19,7 +19,7 @@ const Speech = ({ speech }) => {
         内容：{content}
       </div>
       <Image image={image}/>
-    </div>
+    </p>
   )
 }
 
