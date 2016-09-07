@@ -3,16 +3,11 @@ import ReactDOM from 'react-dom'
 import { Router, Route, IndexRoute, hashHistory } from 'react-router'
 
 import Main from './pages/Main'
-import Recruit from './pages/Recruit'
-import { Schedule, Position, Announce, FAQ } from './pages/Recruit/'
-
-import Campus from './pages/Campus'
-import { Coding, OpenDay, Girl } from './pages/Campus/'
-
-import Company from './pages/Company'
-import { Introduction, Activity, Training, Benefit, Office } from './pages/Company/'
-
 import NotFound from './pages/NotFound'
+
+import Recruit, { Schedule, Position, Announce, FAQ } from './pages/Recruit/'
+import Campus, { Coding, OpenDay, Girl } from './pages/Campus/'
+import Company, { Introduction, Activity, Training, Benefit, Office } from './pages/Company/'
 
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
 import './index.less'
