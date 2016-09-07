@@ -21,7 +21,7 @@ var faviconPath = path.resolve(__dirname, relativePath, 'favicon.ico');
 var buildPath = path.join(__dirname, isInNodeModules ? '../../..' : '..', 'build');
 
 module.exports = {
-  devtool: 'eval',
+  devtool: 'source-map',
   entry: [
     require.resolve('webpack-dev-server/client') + '?http://localhost:3000',
     require.resolve('webpack/hot/dev-server'),
@@ -35,7 +35,7 @@ module.exports = {
     publicPath: '/'
   },
   resolve: {
-    extensions: ['', '.js'],
+    extensions: ['', '.js', 'jsx'],
   },
   resolveLoader: {
     root: nodeModulesPath,
@@ -59,12 +59,27 @@ module.exports = {
       {
         test: /\.css$/,
         include: srcPath,
-        loader: 'style!css!postcss'
+        exclude: path.resolve(__dirname, relativePath, 'node_modules/bootstrap'),
+        loaders: [
+          'style?sourceMap',
+          'css?modules&importLoaders=1&localIdentName=[name]__[local]-[hash:base64:5]',
+          'postcss'
+        ]
+      },
+      {
+        test: /\.css$/,
+        include: path.resolve(__dirname, relativePath, 'node_modules/bootstrap'),
+        loader: 'style?sourceMap!css!postcss'
       },
       {
         test: /\.less$/,
         include: srcPath,
-        loader: 'style!css!postcss!less'
+        loaders: [
+          'style?sourceMap',
+          'css?modules&importLoaders=1&localIdentName=[name]__[local]-[hash:base64:5]',
+          'postcss',
+          'less?sourceMap'
+        ]
       },
       {
         test: /\.json$/,
@@ -84,7 +99,7 @@ module.exports = {
     configFile: path.join(__dirname, 'eslint.js'),
     useEslintrc: false
   },
-  postcss: function() {
+  postcss: function () {
     return [autoprefixer];
   },
   plugins: [

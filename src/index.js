@@ -14,6 +14,7 @@ import { Introduction, Activity, Training, Benefit, Office } from './pages/Compa
 
 import NotFound from './pages/NotFound'
 
+import '../node_modules/bootstrap/dist/css/bootstrap.css'
 import './index.css'
 
 ReactDOM.render((
