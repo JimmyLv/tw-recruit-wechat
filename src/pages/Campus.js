@@ -1,8 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
 
-import NavItem from '../components/NavItem'
-import NavTitle from '../components/NavTitle'
+import { NavItem, NavTitle } from '../components'
 
 import './Campus.less'
 
@@ -18,7 +17,7 @@ const Campus = () => (
 
     <div className="row">
       {navItems.map(({ title, link, image }, index) =>(
-        <div key={index} className={index === 0 ? "col-xs-offset-3 col-xs-6 Campus-nav": "col-xs-6 Campus-nav"}>
+        <div key={index} className={index === 0 ? "col-xs-offset-3 col-xs-6 Campus-nav" : "col-xs-6 Campus-nav"}>
           <Link to={`campus/${link}`}>
             <NavItem title={title} image={image}/>
           </Link>

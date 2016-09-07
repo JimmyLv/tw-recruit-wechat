@@ -1,8 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
 
-import NavItem from '../components/NavItem'
-import NavTitle from '../components/NavTitle'
+import { NavItem, NavTitle } from '../components'
 
 import './Recruit.less'
 
