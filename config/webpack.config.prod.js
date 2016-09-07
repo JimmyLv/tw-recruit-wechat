@@ -4,6 +4,10 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+// multiple extract instances
+var extractCSS = new ExtractTextPlugin('[name].css');
+var extractBootstrap = new ExtractTextPlugin('bootstrap.css');
+
 // TODO: hide this behind a flag and eliminate dead code on eject.
 // This shouldn't be exposed to the user.
 var isInNodeModules = 'node_modules' ===
@@ -28,6 +32,7 @@ module.exports = {
       'react',
       'react-dom',
       'react-router',
+      'classnames',
     ]
   },
   output: {
@@ -63,20 +68,32 @@ module.exports = {
       {
         test: /\.css$/,
         include: srcPath,
+        exclude: path.resolve(__dirname, relativePath, 'node_modules/bootstrap'),
         // Disable autoprefixer in css-loader itself:
         // https://github.com/webpack/css-loader/issues/281
         // We already have it thanks to postcss.
-        loader: ExtractTextPlugin.extract(
+        loader: extractCSS.extract(
           'style',
-          'css?-autoprefixer&modules&localIdentName=[name]__[local]-[hash:base64:5]!postcss'
+          'css?sourceMap&modules&localIdentName=[name]__[local]___[hash:base64:5]&-autoprefixer!postcss'
+        )
+      },
+      {
+        test: /\.css$/,
+        include: path.resolve(__dirname, relativePath, 'node_modules/bootstrap'),
+        // Disable autoprefixer in css-loader itself:
+        // https://github.com/webpack/css-loader/issues/281
+        // We already have it thanks to postcss.
+        loader: extractBootstrap.extract(
+          'style',
+          'css?sourceMap&-autoprefixer!postcss'
         )
       },
       {
         test: /\.less$/,
         include: srcPath,
-        loader: ExtractTextPlugin.extract(
+        loader: extractCSS.extract(
           'style',
-          'css?-autoprefixer&modules&localIdentName=[name]__[local]-[hash:base64:5]!postcss!less'
+          'css?sourceMap&modules&localIdentName=[name]__[local]___[hash:base64:5]&-autoprefixer!postcss!less'
         )
       },
       {
@@ -119,6 +136,8 @@ module.exports = {
     return [autoprefixer];
   },
   plugins: [
+    extractCSS,
+    extractBootstrap,
     new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js'),
     new HtmlWebpackPlugin({
       inject: true,
@@ -154,7 +173,6 @@ module.exports = {
         comments: false,
         screw_ie8: true
       }
-    }),
-    new ExtractTextPlugin('[name].css', { allChunks: true })
+    })
   ]
 };

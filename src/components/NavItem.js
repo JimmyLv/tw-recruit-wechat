@@ -1,11 +1,11 @@
 import React from 'react'
-import './NavItem.less'
+import styles from './NavItem.less'
 
 const NavItem = ({ title, image }) => (
-  <div className="NavItem">
+  <div>
     <img src={require(`../../images/${image}`)} className="img-responsive" alt={title}/>
-    <div className="nav-item-title">
-      {title.split('\n').map((t, index)=><h2 key={index}>{t}</h2>)}
+    <div className={styles.title}>
+      {title.split('\n').map((t, index)=><h2 key={index} data-role="nav-item-title">{t}</h2>)}
     </div>
   </div>
 )

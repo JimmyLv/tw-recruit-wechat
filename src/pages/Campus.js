@@ -15,7 +15,8 @@ const navItems = [
 ]
 
 const navClass = (index) => classNames(
-  'col-xs-6 Campus-nav',
+  [styles.nav],
+  'col-xs-6',
   { 'col-xs-offset-3': index === 0 }
 )
 

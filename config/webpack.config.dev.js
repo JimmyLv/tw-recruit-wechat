@@ -61,22 +61,22 @@ module.exports = {
         include: srcPath,
         exclude: path.resolve(__dirname, relativePath, 'node_modules/bootstrap'),
         loaders: [
-          'style?sourceMap',
-          'css?modules&importLoaders=1&localIdentName=[name]__[local]-[hash:base64:5]',
+          'style',
+          'css?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
           'postcss'
         ]
       },
       {
         test: /\.css$/,
         include: path.resolve(__dirname, relativePath, 'node_modules/bootstrap'),
-        loader: 'style?sourceMap!css!postcss'
+        loader: 'style!css?sourceMap!postcss'
       },
       {
         test: /\.less$/,
         include: srcPath,
         loaders: [
-          'style?sourceMap',
-          'css?modules&importLoaders=1&localIdentName=[name]__[local]-[hash:base64:5]',
+          'style',
+          'css?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
           'postcss',
           'less?sourceMap'
         ]
