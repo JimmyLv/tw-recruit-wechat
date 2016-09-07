@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Image from './Image'
+import Image from '../Image/Image'
 import './Speech.less'
 
 const Speech = ({ speech }) => {

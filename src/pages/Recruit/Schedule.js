@@ -1,7 +1,7 @@
 import React from 'react'
 
-import NavSubTitle from '../../components/NavSubTitle'
-import Image from '../../components/Image'
+import { NavSubTitle, Image }from '../../components'
+
 import './Schedule.less'
 
 const renderProgresses = ({ image, description }, index, length) => (

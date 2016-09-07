@@ -1,8 +1,7 @@
 import React from 'react'
 
-import NavSubTitle from '../../components/NavSubTitle'
-import Image from '../../components/Image'
-import Speech from '../../components/Speech'
+import { NavSubTitle, Image, Speech }from '../../components'
+
 import './index.less'
 
 const speeches = [

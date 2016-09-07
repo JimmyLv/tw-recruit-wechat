@@ -1,8 +1,7 @@
 import React from 'react'
 import './index.less'
 
-import NavSubTitle from '../../components/NavSubTitle'
-import Image from '../../components/Image'
+import { NavSubTitle, Image }from '../../components'
 
 const renderImage = ({ image, city }, index) => (
   <Image key={index} image={image} title={`最佳编程体验之旅——${city}站`}/>

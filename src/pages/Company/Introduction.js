@@ -1,8 +1,7 @@
 import React from 'react'
 
-import NavSubTitle from '../../components/NavSubTitle'
-import Image from '../../components/Image'
-import Person from '../../components/Person'
+import { NavSubTitle, Image, Person }from '../../components'
+
 import './Introduction.less'
 
 const pillars = [

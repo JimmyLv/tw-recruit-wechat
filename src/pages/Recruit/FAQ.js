@@ -1,7 +1,7 @@
 import React from 'react'
 
-import NavSubTitle from '../../components/NavSubTitle'
-import Image from '../../components/Image'
+import { NavSubTitle, Image }from '../../components'
+
 import './FAQ.less'
 
 const renderFAQ = ({ question, answer }, index) => (

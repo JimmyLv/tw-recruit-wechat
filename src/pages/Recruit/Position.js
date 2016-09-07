@@ -1,6 +1,6 @@
 import React from 'react'
 
-import NavSubTitle from '../../components/NavSubTitle'
+import { NavSubTitle }from '../../components'
 import './Position.less'
 
 const Position = () => (
