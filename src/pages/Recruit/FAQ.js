@@ -12,6 +12,29 @@ const renderFAQ = ({ question, answer }, index) => (
 )
 
 const questions = [
+  {
+    question: 'ThoughtWorks今年为什么会有内推，内推和传统校招的区别是什么，参加内推的好处是什么？',
+    answer: '内推是校招的预热，为想加入TW的同学，提供提前拿到TW Offer的机会。'
+  },
+  {
+    question: '内推有名额限制吗？',
+    answer: '有，每个推荐人有简历推荐名额限制。HR会对推荐简历进行把关。'
+  },
+  {
+    question: '参加了内推失败了还可以参加校招吗？',
+    answer: '如果你只是提交了简历，没有进入到提交作业环节，可以参加校招；如果已提交作业或者参与到了后面的面试环节，就不能再参加校招。'
+  },
+  {
+    question: '内推渠道Offer和校招Offer的入职后，培养发展会有区别吗？',
+    answer: '没有区别，除技术领导管培生职位，其它校招职位都是统一的培养方式。'
+  },
+  {
+    question: '你们对推荐人有要求吗，如果不是学长学姐，技术社区、论坛、大会上接触到TW员工可以吗？',
+    answer: '可以，TWer会先和你有一个了解把关，以及推荐人会有推荐名额限制。'
+  },
+]
+
+const questions1 = [
   { question: '公司有针对新员工的培训项目吗？', answer: '公司会从你接受Offer起就制订一系列的培训课程，包括在印度与其他十几个国家毕业生一起参与的毕业生培训。入职后一对一的小伙伴帮助计划也是帮你快速成长及融入新环境的最佳方式。' },
   { question: '如被录用，能否提前到公司实习？', answer: '各个城市的办公室对实习生需求不同，愿意实习的同学可在征求学校和导师同意后与你所在城市的HR沟通。' },
   { question: '如果在应聘的过程中被拒，是否会有相关通知？', answer: '在应聘过程中如果被拒，我们会发邮件到同学的注册邮箱；同时也可以登录我们的校招平台或者我们的校招微信公众号查看个人应聘状态。' },
@@ -56,6 +79,7 @@ const Position = () => (
         <strong>如果对ThoughtWorks校园招聘有问题，有什么方式可以咨询吗？</strong>
         <p>可以关注TW校招微信 <span className="faq-keyword">@ThoughtWorks校园招聘</span> 与我们联系；或登录校园招聘系统留言以及宣讲会互动问答环节提问，工作人员也可为你答疑解惑。</p>
       </li>
+      {questions.map((faq, index) => renderFAQ(faq, index))}
       <li>
         <strong>如被录用，档案户口落在哪里？什么时候可以入职？</strong>
         <ul>
@@ -67,7 +91,7 @@ const Position = () => (
           </li>
         </ul>
       </li>
-      {questions.map((faq, index) => renderFAQ(faq, index))}
+      {questions1.map((faq, index) => renderFAQ(faq, index))}
       <li>
         <strong>ThoughtWorks 2017 校园招聘将去哪些学校捏？</strong>
         <div>校园行覆盖西安、成都、武汉、北京四个城市。</div>
