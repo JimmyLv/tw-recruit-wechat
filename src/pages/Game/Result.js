@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
 import { Header, PercentageCircle } from '../../components'
-import http from 'http'
+import 'whatwg-fetch'
 
 import './Result.css'
 
@@ -15,28 +15,23 @@ class Result extends Component {
    componentDidMount() {
       const questions = JSON.parse(localStorage.getItem('questions'))
       const record = this.calculateScore(questions)
-      const request = http.request({
-         hostname: '182.92.6.60',
-         port: 28080,
-         path: '/tw-game/record',
-         method: 'POST',
-         headers: { 'Content-Type': 'application/json' }
-      }, response => {
-         response.on('data', content => {
-            const id = JSON.parse(content).id
-            http.get('http://182.92.6.60:28080/tw-game/record/' + id + '/defeatPercent', response => {
-               response.on('data', content => {
+
+      fetch('http://182.92.6.60:28080/tw-game/record', {
+         method: 'post',
+         headers: new Headers({
+            'Content-Type': 'application/json'
+         }),
+         body: JSON.stringify(record)
+      }).then(res => res.json())
+         .then(content => {
+            fetch(`http://182.92.6.60:28080/tw-game/record/${content.id}/defeatPercent`)
+               .then(res => res.json())
+               .then(content => {
                   this.setState({
                      record: { ...record, ranking: content }
                   })
-
                })
-            })
          })
-      })
-      request.write(JSON.stringify(record))
-      request.end()
-
    }
 
    calculateScore(questions) {
