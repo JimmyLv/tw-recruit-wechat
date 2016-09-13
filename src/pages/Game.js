@@ -54,14 +54,16 @@ class Game extends Component {
   render() {
     const { questions, indexCurrent } = this.state
     return (
-      <div className="Game">
-        <Header />
-        <Question question={questions[indexCurrent]}/>
-        <Background />
-        <Navigation index={this.state.indexCurrent} total={this.state.questions.length}
-                    onNext={this.handleNext} onPrevious={this.handlePrevious}
-        />
-        <Footer />
+      <div className="Game-container">
+        <div className="Game">
+          <Header />
+          <Question question={questions[indexCurrent]}/>
+          <Background />
+          <Navigation index={this.state.indexCurrent} total={this.state.questions.length}
+                      onNext={this.handleNext} onPrevious={this.handlePrevious}
+          />
+          <Footer />
+        </div>
       </div>
     )
   }

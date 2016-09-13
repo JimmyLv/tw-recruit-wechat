@@ -1,101 +1,103 @@
-.Game {
-  margin: 30px 20px 0 !important;
+.Game-container {
+  padding: 30px 20px 0 !important;
   max-width: 800px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: url("../images/background/hill-1.svg"), url("../images/background/hill-2.svg"), url("../images/background/hill-3.svg");
-  background-color: #ddd !important;
+  background-color: #dddddd !important;
   background-repeat: no-repeat;
   animation: animatedBackground 10s linear infinite;
-  //background: url("../images/background/panda.svg") no-repeat;
-  background-position: 2% 89%;
 
-  .app-header {
-    display: inline-block;
-    width: 100%;
-  }
+  .Game {
+    background: url("../images/background/panda.svg") no-repeat 2% 89%;
 
-  img[alt="header-cloud"] {
-    display: block;
-    width: 25%;
-    height: 25%;
-    float: right;
-  }
-
-  .question-panel {
-    line-height: 1.5;
-    color: #021215;
-  }
-
-  .question-content {
-    margin: 10px 0 20px 0;
-    font-family: "Kaiti SC";
-    font-weight: bold;
-    text-align: left;
-  }
-
-  .option-container {
-    margin: 0 0 16px;
-    font-size: 16px;
-  }
-
-  .option-container .option {
-    margin: 0;
-    text-align: left;
-    display: block;
-  }
-
-  .option-container .option input[type="radio"] {
-    display: none;
-  }
-
-  .option-container .option b:before {
-    display: inline-block;
-    position: absolute;
-  }
-
-  .option-container .option .option-text {
-    margin-left: 32px;
-    font-family: "Kaiti SC";
-    display: block;
-    font-size: 16px;
-  }
-
-  .option input:checked + b:before {
-    content: url("../images/yes.svg");
-  }
-
-  .option input:not(:checked) + b:before {
-    content: url("../images/no.svg");
-  }
-
-  .background-placeholder {
-    width: 100%;
-    height: 80px;
-  }
-
-  .pager {
-    margin-left: 34px !important;
-    margin-right: 34px !important;
-    font-family: "Kaiti SC";
-    font-size: 18px;
-    line-height: 1;
-  }
-
-  .pager .next a,
-  .pager .previous a {
-    padding: 13px 30px;
-    color: #fff;
-    background-color: #5b5959 !important;
-    border-radius: 40px;
-  }
-
-  @keyframes animatedBackground {
-    from {
-      background-position: 0 89%;
+    .app-header {
+      display: inline-block;
+      width: 100%;
     }
 
-    to {
-      background-position: 100% 89%;
+    img[alt="header-cloud"] {
+      display: block;
+      width: 25%;
+      height: 25%;
+      float: right;
+    }
+
+    .question-panel {
+      line-height: 1.5;
+      color: #021215;
+    }
+
+    .question-content {
+      margin: 10px 0 20px 0;
+      font-family: "Kaiti SC";
+      font-weight: bold;
+      text-align: left;
+    }
+
+    .option-container {
+      margin: 0 0 16px;
+      font-size: 16px;
+    }
+
+    .option-container .option {
+      margin: 0;
+      text-align: left;
+      display: block;
+    }
+
+    .option-container .option input[type="radio"] {
+      display: none;
+    }
+
+    .option-container .option b:before {
+      display: inline-block;
+      position: absolute;
+    }
+
+    .option-container .option .option-text {
+      margin-left: 32px;
+      font-family: "Kaiti SC";
+      display: block;
+      font-size: 16px;
+    }
+
+    .option input:checked + b:before {
+      content: url("../images/yes.svg");
+    }
+
+    .option input:not(:checked) + b:before {
+      content: url("../images/no.svg");
+    }
+
+    .background-placeholder {
+      width: 100%;
+      height: 80px;
+    }
+
+    .pager {
+      margin-left: 34px !important;
+      margin-right: 34px !important;
+      font-family: "Kaiti SC";
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    .pager .next a,
+    .pager .previous a {
+      padding: 13px 30px;
+      color: #fff;
+      background-color: #5b5959 !important;
+      border-radius: 40px;
+    }
+
+    @keyframes animatedBackground {
+      from {
+        background-position: 0 89%;
+      }
+
+      to {
+        background-position: 100% 89%;
+      }
     }
   }
 }
