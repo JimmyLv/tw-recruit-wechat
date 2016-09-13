@@ -1,0 +1,14 @@
+.circle-wrapper {
+    width:204px;
+    margin:0 auto;
+}
+circle {
+    -webkit-transition: stroke-dasharray .25s;
+    transition: stroke-dasharray .25s;
+}
+.percentage {
+    margin-top: -119px;
+    text-align: center;
+    vertical-align: center;
+    font-size: 20px;
+}

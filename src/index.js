@@ -12,6 +12,9 @@ import { Coding, OpenDay, Girl } from './pages/Campus/'
 import Company from './pages/Company'
 import { Introduction, Activity, Training, Benefit, Office } from './pages/Company/'
 
+import Game from './pages/Game'
+import { Result } from './pages/Game/'
+
 import NotFound from './pages/NotFound'
 
 import './index.css'
@@ -40,6 +43,10 @@ ReactDOM.render((
           <Route path="training" component={Training}/>
           <Route path="benefit" component={Benefit}/>
           <Route path="office" component={Office}/>
+        </Route>
+        <Route path="game">
+          <IndexRoute component={Game}/>
+          <Route path="result" component={Result}/>
         </Route>
         <Route path="*" component={NotFound}/>
       </Route>
