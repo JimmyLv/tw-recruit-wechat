@@ -26,7 +26,7 @@ class Game extends Component {
   }
 
   static shuffleQuestions(questions) {
-    return Game.random(questions, 3)
+    return Game.random(questions, 13)
   }
 
   static shuffleOptions(options) {
