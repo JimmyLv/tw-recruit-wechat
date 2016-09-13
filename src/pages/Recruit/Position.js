@@ -6,7 +6,7 @@ import './Position.less'
 const Position = () => (
   <div className="container">
     <NavSubTitle title="软件开发工程师"/>
-    <p className="roles">
+    <div className="roles">
       <div className="role-description"><strong>工作地点：</strong></div>
       <span className="address">北京、西安、成都、武汉</span>
       <div className="role-description"><strong>ThoughtWorks需要你：</strong></div>
@@ -24,10 +24,10 @@ const Position = () => (
         <li className="no-justify">熟练掌握一种以上主流开发语言(C/C++/C#/Java/Ruby/Python)或Web开发技术(主流开发框架/HTML/CSS/JavaScript等)</li>
         <li>善于沟通，能够成为一名积极、乐于分享的团队成员</li>
       </ul>
-    </p>
+    </div>
 
     <NavSubTitle title="软件测试工程师"/>
-    <p className="roles">
+    <div className="roles">
       <div className="role-description"><strong>工作地点：</strong></div>
       <span className="address">北京、西安、成都、武汉</span>
       <div className="role-description"><strong>ThoughtWorks需要你：</strong></div>
@@ -47,10 +47,10 @@ const Position = () => (
         <li>具备良好的沟通表达能力，包括口头和书面沟通</li>
         <li>踏实、认真、细心，并对软件测试工作有浓厚的兴趣</li>
       </ul>
-    </p>
+    </div>
 
     <NavSubTitle title="技术领导管培生"/>
-    <p className="roles">
+    <div className="roles">
       <div className="role-description"><strong>工作地点：</strong></div>
       <span className="address">北京、西安、成都、武汉</span>
       <div className="role-description"><strong>什么是管理培训生计划？</strong></div>
@@ -89,7 +89,7 @@ const Position = () => (
         <li>每月一次的综合反馈、每季度一次的表现评估，三次不达标，则遗憾的说：你需要离开ThoughtWorks</li>
         <li>80%时间，你在各地出差，或在云端飞行</li>
       </ol>
-    </p>
+    </div>
   </div>
 )
 
