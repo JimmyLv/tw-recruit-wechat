@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Router, Route, IndexRoute, browserHistory } from 'react-router'
+import { Router, Route, IndexRoute, hashHistory } from 'react-router'
 
 import Main from './pages/Main'
 import Recruit from './pages/Recruit'
@@ -20,7 +20,7 @@ import NotFound from './pages/NotFound'
 import './index.css'
 
 ReactDOM.render((
-    <Router history={browserHistory}>
+    <Router history={hashHistory}>
       <Route path="/">
         <IndexRoute component={Main}/>
         <Route path="recruit">
