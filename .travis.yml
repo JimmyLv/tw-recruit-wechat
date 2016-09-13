@@ -26,6 +26,7 @@ after_success:
 #  - bash <(curl -s https://codecov.io/bash)
   - |
     if [ -n "$GITHUB_API_KEY" ]; then
+      cp CNAME build/CNAME
       cd build
       git init
       git config --global user.name "Travis CI"
