@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
 import { Header, PercentageCircle } from '../../components'
-import http from 'http';
+import http from 'http'
 
 import './Result.css'
 

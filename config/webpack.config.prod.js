@@ -28,6 +28,7 @@ module.exports = {
       'react',
       'react-dom',
       'react-router',
+      'http',
     ]
   },
   output: {
