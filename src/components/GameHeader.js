@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../images/header/cloud.png'
+import logo from '../../images/game/header/cloud.png'
 
 const Header = () => (
     <div className="app-header">

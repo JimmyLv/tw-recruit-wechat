@@ -25,7 +25,6 @@ module.exports = {
   entry: {
     main: path.join(srcPath, 'index'),
     vendor: [
-      // react
       'react',
       'react-dom',
       'react-router',
