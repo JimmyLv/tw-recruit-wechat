@@ -8,7 +8,6 @@ class Questions extends Component {
    constructor(props) {
       super(props)
       this.handleNext = this.handleNext.bind(this)
-      this.handlePrevious = this.handlePrevious.bind(this)
       this.state = {
          questions: Questions.loadQuestions(),
          indexCurrent: 0
@@ -26,7 +25,7 @@ class Questions extends Component {
    }
 
    static shuffleQuestions(questions) {
-      return Questions.random(questions, 13)
+      return Questions.random(questions, 2)
    }
 
    static shuffleOptions(options) {
@@ -57,10 +56,9 @@ class Questions extends Component {
          <div className="Game-container">
             <div className="Game">
                <Header />
-               <Question question={questions[indexCurrent]} questionIndex={indexCurrent} />
+               <Question question={questions[indexCurrent]} questionIndex={indexCurrent} onNext={this.handleNext}/>
                <Background />
-               <Navigation index={this.state.indexCurrent} total={this.state.questions.length}
-                           onNext={this.handleNext} onPrevious={this.handlePrevious}
+               <Navigation index={this.state.indexCurrent} total={this.state.questions.length} onNext={this.handleNext}
                />
                <Footer />
             </div>
@@ -68,23 +66,15 @@ class Questions extends Component {
       )
    }
 
-   handlePrevious(current) {
-      if (current <= 0) return;
-
-      this.setState({ indexCurrent: current - 1 })
-   }
-
-   handleNext() {
+   handleNext(userAnswer) {
       const { questions, indexCurrent } = this.state
-      if (!questions[indexCurrent].userAnswer) return;
+      const currentQuestion = questions[indexCurrent]
 
-      if (indexCurrent < questions.length - 1) {
-         this.setState({ indexCurrent: indexCurrent + 1 })
-         return;
+      if (currentQuestion.correctAnswer === userAnswer) {
+         this.setState({ indexCurrent: indexCurrent + 1})
       }
-
-      localStorage.setItem('questions', JSON.stringify(questions))
    }
+
 }
 
 export default Questions

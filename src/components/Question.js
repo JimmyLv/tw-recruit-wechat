@@ -33,7 +33,8 @@ class Question extends Component {
          <div className="option-container">
             <label className="option" key={index} htmlFor={ `option${index}` }>
                <input id={ `option${index}` } type="radio" value={option} name="option"
-                      onChange={this.onOptionSelected(question)}
+                      onChange={this.onOptionSelected}
+
                       checked={option === this.state.userAnswer}/>
                <b><span className="option-text">{option}</span></b>
             </label>
@@ -41,12 +42,9 @@ class Question extends Component {
       )
    }
 
-   onOptionSelected(question) {
-      return event => {
-         const userAnswer = event.target.value
-         question.userAnswer = userAnswer
-         this.setState({ userAnswer })
-      }
+   onOptionSelected(event) {
+      const userAnswer = event.target.value
+      this.props.onNext(userAnswer)
    }
 }
 
