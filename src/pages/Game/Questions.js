@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import { Question, Navigation, Background, Header, Footer } from '../../components'
 
 import Data from '../../data/questions.json'
@@ -72,6 +73,8 @@ class Questions extends Component {
 
       if (currentQuestion.correctAnswer === userAnswer) {
          this.setState({ indexCurrent: indexCurrent + 1})
+      } else {
+         this.props.history.push('/game/result/failure')
       }
    }
 
