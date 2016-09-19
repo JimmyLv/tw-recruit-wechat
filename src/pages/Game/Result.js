@@ -31,7 +31,7 @@ const renderFailureSummary = (title) => (
 const renderYouCanYouUpAgainButton = () => (
    <div className="you-can-you-up-again">
       <Link to="/game/questions">
-         我不服!
+         不服再站！
       </Link>
    </div>
 )
