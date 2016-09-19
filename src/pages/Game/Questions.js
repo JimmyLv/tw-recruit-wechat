@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 
 import { Question, Navigation, Background, Header, Footer } from '../../components'
+import { shuffle } from '../../utils/random'
 
-import Data from '../../data/questions.json'
+import Data from './questions.json'
 import './Questions.less'
 
 class Questions extends Component {
@@ -16,39 +17,11 @@ class Questions extends Component {
    }
 
    static loadQuestions() {
-      return Questions.shuffleQuestions(Data).map((question, index) => ({
+      return Data.map((question, index) => ({
          ...question,
-         index
-      })).map(question => ({
-         ...question,
-         options: Questions.shuffleOptions(question.options)
+         index,
+         options: shuffle(question.options, 4)
       }))
-   }
-
-   static shuffleQuestions(questions) {
-      return Questions.random(questions, 2)
-   }
-
-   static shuffleOptions(options) {
-      return Questions.random(options, 4)
-   }
-
-   static random(array, number) {
-      if (array.length < number) return array
-      let choosedIndecies = []
-      let result = []
-
-      while (result.length < number) {
-         let index
-         do {
-            index = Math.floor(Math.random() * array.length)
-         } while (choosedIndecies.includes(index))
-
-         choosedIndecies.push(index)
-         result.push(array[index])
-      }
-
-      return result
    }
 
    render() {
