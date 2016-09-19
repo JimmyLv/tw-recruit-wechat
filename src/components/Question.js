@@ -15,10 +15,11 @@ class Question extends Component {
    }
 
    render() {
-      const { question } = this.props
+      const { question, questionIndex } = this.props
       return (
 
          <div className="question-panel">
+            <h4 className="question-index">第 {questionIndex} 题</h4>
             <h4 className="question-content">{ question.question }</h4>
             <div className="options">{
                question.options.map((option, index) => this.renderOption(option, index, question))

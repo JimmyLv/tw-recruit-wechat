@@ -13,7 +13,7 @@ import Company from './pages/Company'
 import { Introduction, Activity, Training, Benefit, Office } from './pages/Company/'
 
 import Game from './pages/Game'
-import { Result } from './pages/Game/'
+import { Questions, Result } from './pages/Game/'
 
 import NotFound from './pages/NotFound'
 
@@ -46,6 +46,7 @@ ReactDOM.render((
         </Route>
         <Route path="game">
           <IndexRoute component={Game}/>
+           <Route path="questions" component={Questions} />
           <Route path="result" component={Result}/>
         </Route>
         <Route path="*" component={NotFound}/>
