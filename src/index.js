@@ -13,7 +13,7 @@ import Company from './pages/Company'
 import { Introduction, Activity, Training, Benefit, Office } from './pages/Company/'
 
 import Game from './pages/Game'
-import { Questions, Result } from './pages/Game/'
+import { Questions, Result, Ranking } from './pages/Game/'
 
 import NotFound from './pages/NotFound'
 
@@ -48,6 +48,7 @@ ReactDOM.render((
           <IndexRoute component={Game}/>
            <Route path="questions" component={Questions} />
           <Route path="result" component={Result}/>
+           <Route path="ranking" component={Ranking} />
         </Route>
         <Route path="*" component={NotFound}/>
       </Route>
