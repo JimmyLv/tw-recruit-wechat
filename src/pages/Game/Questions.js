@@ -71,11 +71,17 @@ class Questions extends Component {
       const { questions, indexCurrent } = this.state
       const currentQuestion = questions[indexCurrent]
 
-      if (currentQuestion.correctAnswer === userAnswer) {
-         this.setState({ indexCurrent: indexCurrent + 1})
-      } else {
+      if (currentQuestion.correctAnswer !== userAnswer) {
          this.props.history.push('/game/result/failure')
+         return
       }
+
+      if (indexCurrent === questions.length - 1) {
+         this.props.history.push('/game/result/success')
+         return
+      }
+
+      this.setState({ indexCurrent: indexCurrent + 1 })
    }
 
 }

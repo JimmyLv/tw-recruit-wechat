@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router'
 
 import './Result.css'
 
@@ -23,7 +24,7 @@ const renderRankingButton = () => (
       </Link>
    </div>
 )
-const ResultSuccess = ({ challengeSuccess, title }) => (
+const ResultSuccess = () => (
    <div className="Result-container">
       { renderSuccessSummary() }
       { renderRankingButton() }

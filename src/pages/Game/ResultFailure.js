@@ -22,9 +22,9 @@ const renderYouCanYouUpAgainButton = () => (
    </div>
 )
 
-const ResultFailure = () => (
+const ResultFailure = ({ title }) => (
    <div className="ResultFailure container">
-      { renderFailureSummary() }
+      { renderFailureSummary(title) }
       { renderYouCanYouUpAgainButton() }
    </div>
 )

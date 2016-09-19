@@ -1,10 +1,34 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
 
+const renderSuccessChallengedPercentage = () => (
+   <div className="success-challenged-percentage">
+
+   </div>
+)
+
+const renderNobodySuccessYetPage = () => (
+   <div className="nobody-success-yet">
+      <p> 迄今为止还没有一个“站神”出现！ </p>
+      <p> 快去挑战做“站神”第一人吧！ </p>
+   </div>
+)
+
+const renderYouCanYouUpButton = () => (
+   <div className="you-can-you-up-again">
+      <Link to="/game/questions">
+         不服再站！
+      </Link>
+   </div>
+)
+
+
 class Ranking extends Component {
    constructor(props) {
       super(props)
-      this.state = { totalWonChallenge: 0 }
+      this.state = {
+         totalWonChallenge: 2
+      }
    }
 
    componentDidMount() {
@@ -15,44 +39,17 @@ class Ranking extends Component {
       const { totalWonChallenge } = this.state
       return (
          <div className="Ranking-container">
-            { totalWonChallenge > 0 ? this.renderSuccessChallengedPercentage() : '' }
-            { totalWonChallenge === 0 ? this.renderNobodySuccessYetPage() : this.renderRankingPage() }
-            { totalWonChallenge === 0 ? this.renderYouCanYouUpButton() : ''}
+            { totalWonChallenge > 0 ? renderSuccessChallengedPercentage() : '' }
+            { totalWonChallenge === 0 ? renderNobodySuccessYetPage() : this.renderRankingPage(totalWonChallenge) }
+            { totalWonChallenge === 0 ? renderYouCanYouUpButton() : ''}
          </div>
       )
    }
 
-   renderSuccessChallengedPercentage() {
-      return (
-         <div className="success-challenged-percentage">
-
-         </div>
-      )
-   }
-
-   renderNobodySuccessYetPage() {
-      return (
-         <div className="nobody-success-yet">
-            <p> 迄今为止还没有一个“站神”出现！ </p>
-            <p> 快去挑战做“站神”第一人吧！ </p>
-         </div>
-      )
-   }
-
-   renderRankingPage() {
+   renderRankingPage(totalWonChallenge) {
       return (
          <div className="ranking-page">
-            <p>前面已有855名“站神”完成挑战！</p>
-         </div>
-      )
-   }
-
-   renderYouCanYouUpButton() {
-      return (
-         <div className="you-can-you-up-again">
-            <Link to="/game/questions">
-               不服再站！
-            </Link>
+            <p>前面已有{totalWonChallenge}名“站神”完成挑战！</p>
          </div>
       )
    }
