@@ -47,7 +47,7 @@ ReactDOM.render((
          <Route path="game">
             <IndexRoute component={Game}/>
             <Route path="questions" component={Questions}/>
-            <Route path="result/failure" component={ResultFailure} />
+            <Route path="result/failure/:correctAnswerCount" component={ResultFailure} />
             <Route path="result/success" component={ResultSuccess} />
             <Route path="ranking" component={Ranking}/>
          </Route>

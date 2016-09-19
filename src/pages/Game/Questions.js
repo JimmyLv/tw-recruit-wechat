@@ -72,7 +72,7 @@ class Questions extends Component {
       const currentQuestion = questions[indexCurrent]
 
       if (currentQuestion.correctAnswer !== userAnswer) {
-         this.props.history.push('/game/result/failure')
+         this.props.history.push(`/game/result/failure/${indexCurrent}`)
          return
       }
 
