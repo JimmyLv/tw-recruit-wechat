@@ -1,90 +1,23 @@
-import React, { Component } from 'react';
-import { Question, Navigation, Background, Header, Footer } from '../components'
+import React from 'react'
+import { Link } from 'react-router'
 
-import Data from '../data/questions.json'
-import './Game.less'
+import './Game/Questions.less'
 
-class Game extends Component {
-  constructor(props) {
-    super(props)
-    this.handleNext = this.handleNext.bind(this)
-    this.handlePrevious = this.handlePrevious.bind(this)
-    this.state = {
-      questions: Game.loadQuestions(),
-      indexCurrent: 0
-    }
-  }
-
-  static loadQuestions() {
-    return Game.shuffleQuestions(Data).map((question, index) => ({
-      ...question,
-      index
-    })).map(question => ({
-      ...question,
-      options: Game.shuffleOptions(question.options)
-    }))
-  }
-
-  static shuffleQuestions(questions) {
-    return Game.random(questions, 13)
-  }
-
-  static shuffleOptions(options) {
-    return Game.random(options, 4)
-  }
-
-  static random(array, number) {
-    if (array.length < number) return array
-    let choosedIndecies = []
-    let result = []
-
-    while (result.length < number) {
-      let index
-      do {
-        index = Math.floor(Math.random() * array.length)
-      } while (choosedIndecies.includes(index))
-
-      choosedIndecies.push(index)
-      result.push(array[index])
-    }
-
-    return result
-  }
-
-  render() {
-    const { questions, indexCurrent } = this.state
-    return (
-      <div className="Game-container">
-        <div className="Game">
-          <Header />
-          <Question question={questions[indexCurrent]}/>
-          <Background />
-          <Navigation index={this.state.indexCurrent} total={this.state.questions.length}
-                      onNext={this.handleNext} onPrevious={this.handlePrevious}
-          />
-          <Footer />
-        </div>
+const Game = () => (
+   <div className="Game">
+      <div className="introduction-panel">
+         <p>
+            程序员思维挑战之奋“站”到底！
+         </p>
+         <p>
+            挖掘个性、充满悬念
+         </p>
+         <p>
+            你会是“站”到最后的“惊世战神”吗？
+         </p>
       </div>
-    )
-  }
-
-  handlePrevious(current) {
-    if (current <= 0) return;
-
-    this.setState({ indexCurrent: current - 1 })
-  }
-
-  handleNext() {
-    const { questions, indexCurrent } = this.state
-    if (!questions[indexCurrent].userAnswer) return;
-
-    if (indexCurrent < questions.length - 1) {
-      this.setState({ indexCurrent: indexCurrent + 1 })
-      return;
-    }
-
-    localStorage.setItem('questions', JSON.stringify(questions))
-  }
-}
+      <Link to="/game/questions">我来应"站"！</Link>
+   </div>
+)
 
 export default Game

@@ -1,2 +1,5 @@
 export Question from '../../components/Question'
-export Result from './Result'
+export ResultSuccess from './ResultSuccess'
+export ResultFailure from './ResultFailure'
+export Questions from './Questions'
+export Ranking from './Ranking'
