@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="282px" height="60px" viewBox="0 0 282 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>Fill 37</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M71.9839137,224.746555 C45.0535313,216.42674 53.1377368,173 53.1377368,173 L320.891888,211.160671 C320.891888,211.160671 330.579225,250.520299 308.177899,253.127495 C285.776573,255.734691 98.9142961,233.066371 71.9839137,224.746555 Z" id="path-1"></path>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.15 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.889808769">
+        <g id="iPhone-6-Copy-5" transform="translate(-46.000000, -188.000000)">
+            <g id="Fill-37" transform="translate(187.487756, 213.167496) rotate(-9.000000) translate(-187.487756, -213.167496) ">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#CEFBE5" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

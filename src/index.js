@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Router, Route, IndexRoute, hashHistory } from 'react-router'
+import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 
 import Main from './pages/Main'
 import Recruit from './pages/Recruit'
@@ -13,14 +13,14 @@ import Company from './pages/Company'
 import { Introduction, Activity, Training, Benefit, Office } from './pages/Company/'
 
 import Game from './pages/Game'
-import { Questions, ResultSuccess, ResultFailure, Ranking } from './pages/Game/'
+import { QuestionsPage, ResultSuccess, ResultFailure, Ranking } from './pages/Game/'
 
 import NotFound from './pages/NotFound'
 
 import './index.css'
 
 ReactDOM.render((
-   <Router history={hashHistory}>
+   <Router history={browserHistory}>
       <Route path="/">
          <IndexRoute component={Main}/>
          <Route path="recruit">
@@ -46,7 +46,7 @@ ReactDOM.render((
          </Route>
          <Route path="game">
             <IndexRoute component={Game}/>
-            <Route path="questions" component={Questions}/>
+            <Route path="questions" component={QuestionsPage}/>
             <Route path="result/failure/:correctAnswerCount" component={ResultFailure} />
             <Route path="result/success" component={ResultSuccess} />
             <Route path="ranking" component={Ranking}/>

@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 
-import { Question, Navigation, Background, Header, Footer } from '../../components'
+import { Question, GameFooter } from '../../components'
 import { shuffle } from '../../utils/random'
 
 import Data from './questions.json'
-import './Questions.less'
+import './QuestionsPage.less'
 
-class Questions extends Component {
+class QuestionsPage extends Component {
    constructor(props) {
       super(props)
       this.handleNext = this.handleNext.bind(this)
       this.state = {
-         questions: Questions.loadQuestions(),
+         questions: QuestionsPage.loadQuestions(),
          indexCurrent: 0
       }
    }
@@ -27,14 +27,14 @@ class Questions extends Component {
    render() {
       const { questions, indexCurrent } = this.state
       return (
-         <div className="Game-container">
-            <div className="Game">
-               <Header />
-               <Question question={questions[indexCurrent]} questionIndex={indexCurrent} onNext={this.handleNext}/>
-               <Background />
-               <Navigation index={this.state.indexCurrent} total={this.state.questions.length} onNext={this.handleNext}
-               />
-               <Footer />
+         <div className="Game">
+            <div className="QuestionsPage">
+               <div className="Questions">
+                  <img className="questionImage" src={require('../../../images/game/header/logo.svg')} alt=""/>
+                  <Question question={questions[indexCurrent]} questionIndex={indexCurrent}
+                            onNext={this.handleNext}/>
+               </div>
+               <GameFooter />
             </div>
          </div>
       )
@@ -59,4 +59,4 @@ class Questions extends Component {
 
 }
 
-export default Questions
+export default QuestionsPage

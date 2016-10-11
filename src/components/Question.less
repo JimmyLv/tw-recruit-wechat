@@ -1,0 +1,61 @@
+.Question {
+  background: url('../../images/game/background/question_background.svg') no-repeat;
+  padding-left: 12px;
+  padding-right: 20px;
+  height: 441px;
+  width: 330px;
+
+  .question-content {
+    font-family: "HanziPen SC", serif;
+    line-height: 1.5;
+    padding-top: 20px;
+    padding-bottom: 15px;
+  }
+
+  .options {
+    font-family: "HanziPen SC", serif;
+  }
+
+  .options {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-direction: column;
+
+    .option-container {
+      width: 282px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+    }
+
+    .option0 {
+      background: url('../../images/game/option_1.svg') no-repeat;
+    }
+
+    .option1 {
+      background: url('../../images/game/option_2.svg') no-repeat;
+    }
+
+    .option2 {
+      background: url('../../images/game/option_3.svg') no-repeat;
+    }
+
+    .option3 {
+      background: url('../../images/game/option_4.svg') no-repeat;
+    }
+  }
+
+  input[type="none"] {
+    display: none;
+  }
+
+  label.option {
+    padding-left: 18px;
+    padding-right: 10px;
+  }
+
+  .option-text {
+    font-size: 16px;
+  }
+}
